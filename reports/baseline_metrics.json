@@ -1,0 +1,73 @@
+{
+  "best_model_name": "tfidf_logistic_regression",
+  "baseline_macro_f1": 0.6002,
+  "baseline_cost_per_1k": 0.0,
+  "models": {
+    "embed_lightgbm": {
+      "model_name": "embed_lightgbm",
+      "macro_f1": 0.5489647719217383,
+      "macro_f1_ci_lower": 0.5395127973530791,
+      "macro_f1_ci_upper": 0.610759570704667,
+      "accuracy": 0.7208461641451333,
+      "cost_per_1k": 0.0,
+      "latency_p50_ms": 0.0,
+      "latency_p95_ms": 0.0,
+      "ece": 0.0345,
+      "n_samples": 7469,
+      "is_pareto": false
+    },
+    "keyword_baseline": {
+      "model_name": "keyword_baseline",
+      "macro_f1": 0.3441440943642775,
+      "macro_f1_ci_lower": 0.3296982960034158,
+      "macro_f1_ci_upper": 0.3582388490401162,
+      "accuracy": 0.4782434060784576,
+      "cost_per_1k": 0.0,
+      "latency_p50_ms": 0.01,
+      "latency_p95_ms": 0.04,
+      "ece": 0.2229,
+      "n_samples": 7469,
+      "is_pareto": false
+    },
+    "majority_baseline": {
+      "model_name": "majority_baseline",
+      "macro_f1": 0.023184234720390134,
+      "macro_f1_ci_lower": 0.02195945945945946,
+      "macro_f1_ci_upper": 0.02451194494077162,
+      "accuracy": 0.11648145668764226,
+      "cost_per_1k": 0.0,
+      "latency_p50_ms": 0.0,
+      "latency_p95_ms": 0.0,
+      "ece": 0.1121,
+      "n_samples": 7469,
+      "is_pareto": false
+    },
+    "tfidf_linear_svm": {
+      "model_name": "tfidf_linear_svm",
+      "macro_f1": 0.5944156398303069,
+      "macro_f1_ci_lower": 0.5850292105846668,
+      "macro_f1_ci_upper": 0.6607629874443361,
+      "accuracy": 0.7694470477975632,
+      "cost_per_1k": 0.0,
+      "latency_p50_ms": 0.0,
+      "latency_p95_ms": 0.0,
+      "ece": 0.0188,
+      "n_samples": 7469,
+      "is_pareto": false
+    },
+    "tfidf_logistic_regression": {
+      "model_name": "tfidf_logistic_regression",
+      "macro_f1": 0.6002124443836719,
+      "macro_f1_ci_lower": 0.5907718145728752,
+      "macro_f1_ci_upper": 0.6654920570351168,
+      "accuracy": 0.7659659927701165,
+      "cost_per_1k": 0.0,
+      "latency_p50_ms": 0.0,
+      "latency_p95_ms": 0.0,
+      "ece": 0.0497,
+      "n_samples": 7469,
+      "is_pareto": true
+    }
+  },
+  "updated_at": "2026-10-09T00:16:37.961508"
+}
