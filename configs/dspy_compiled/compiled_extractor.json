@@ -1,0 +1,63 @@
+{
+  "prog": {
+    "traces": [],
+    "train": [],
+    "demos": [
+      {
+        "augmented": true,
+        "narrative": "Experian is reporting my OPEN and CURRENT Mortgage loan with XXXX as XXXX in BK. XXXX is reporting the monthly payments but Experian is supressing the information and refuses to accurately report the payments and show the account is Open. This debt was Officially reinstated in a Chapter XXXX BK. This is NOT a Chapter XXXX BK and Experian has no legal right to not rport the current status of this mortgage",
+        "issue_category": "Credit Reporting",
+        "root_cause_summary": "Inaccurate delinquent account reported on consumer credit file.",
+        "severity": "medium",
+        "monetary_relief_flag": false,
+        "evidence_quote": "credit report"
+      },
+      {
+        "augmented": true,
+        "narrative": "Experian refused to provide free annual credit report through XXXX. No explanation given, simply we are unable to fill this request. The refusal screen provided the option to buy Experian credit report and scores. Experian is not meeting its obligation to provide a free annual credit report. Experian is deceptively using the XXXX website to sell their products.",
+        "issue_category": "Credit Reporting",
+        "root_cause_summary": "Inaccurate delinquent account reported on consumer credit file.",
+        "severity": "medium",
+        "monetary_relief_flag": false,
+        "evidence_quote": "credit report"
+      }
+    ],
+    "signature": {
+      "instructions": "Extract structured complaint attributes and exact verbatim evidence quote.",
+      "fields": [
+        {
+          "prefix": "Narrative:",
+          "description": "The verbatim consumer complaint narrative."
+        },
+        {
+          "prefix": "Issue Category:",
+          "description": "One of: Credit Reporting, Debt Collection, Mortgages, Credit Card, Bank Services, Loans, Other."
+        },
+        {
+          "prefix": "Root Cause Summary:",
+          "description": "Concise root cause summary in at most 30 words."
+        },
+        {
+          "prefix": "Severity:",
+          "description": "One of: low, medium, high, critical."
+        },
+        {
+          "prefix": "Monetary Relief Flag:",
+          "description": "True if financial compensation or refund is sought, else False."
+        },
+        {
+          "prefix": "Evidence Quote:",
+          "description": "Exact verbatim substring quote from the narrative demonstrating the issue."
+        }
+      ]
+    },
+    "lm": null
+  },
+  "metadata": {
+    "dependency_versions": {
+      "python": "3.11",
+      "dspy": "2.6.27",
+      "cloudpickle": "3.1"
+    }
+  }
+}
