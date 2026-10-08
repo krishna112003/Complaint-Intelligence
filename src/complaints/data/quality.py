@@ -69,9 +69,7 @@ def generate_quality_report(reports_dir: Path | None = None) -> Path:
     mask_counts = df_gold["mask_token_count"] if "mask_token_count" in df_gold else pd.Series()
 
     # Product distributions
-    silver_dist = (
-        df_silver["product"].value_counts().to_dict() if not df_silver.empty else {}
-    )
+    silver_dist = df_silver["product"].value_counts().to_dict() if not df_silver.empty else {}
     gold_dist = df_gold["product"].value_counts().to_dict() if not df_gold.empty else {}
 
     # Label mapping table
@@ -88,11 +86,11 @@ def generate_quality_report(reports_dir: Path | None = None) -> Path:
         "| Stage | File | Row Count | % of Bronze | Description |",
         "|---|---|---|---|---|",
         f"| **Bronze** | `bronze_complaints.parquet` | {total_bronze:,} | 100.0% | Raw CFPB complaint records ingested into DuckDB Parquet. |",
-        f"| **Silver** | `silver_complaints.parquet` | {total_silver:,} | {total_silver/max(1, total_bronze)*100:.1f}% | Deduplicated, whitespace cleaned, minimum length >= 50 chars. |",
-        f"| **Gold Sample** | `gold_sample.parquet` | {total_gold:,} | {total_gold/max(1, total_bronze)*100:.1f}% | Stratified sample with per-class cap (seed = 42). |",
-        f"| **Train** | `train.parquet` | {n_train:,} | {n_train/max(1, total_bronze)*100:.1f}% | Oldest 70% temporal split. |",
-        f"| **Validation** | `val.parquet` | {n_val:,} | {n_val/max(1, total_bronze)*100:.1f}% | Middle 15% temporal split. |",
-        f"| **Test** | `test.parquet` | {n_test:,} | {n_test/max(1, total_bronze)*100:.1f}% | Newest 15% temporal split (held out). |",
+        f"| **Silver** | `silver_complaints.parquet` | {total_silver:,} | {total_silver / max(1, total_bronze) * 100:.1f}% | Deduplicated, whitespace cleaned, minimum length >= 50 chars. |",
+        f"| **Gold Sample** | `gold_sample.parquet` | {total_gold:,} | {total_gold / max(1, total_bronze) * 100:.1f}% | Stratified sample with per-class cap (seed = 42). |",
+        f"| **Train** | `train.parquet` | {n_train:,} | {n_train / max(1, total_bronze) * 100:.1f}% | Oldest 70% temporal split. |",
+        f"| **Validation** | `val.parquet` | {n_val:,} | {n_val / max(1, total_bronze) * 100:.1f}% | Middle 15% temporal split. |",
+        f"| **Test** | `test.parquet` | {n_test:,} | {n_test / max(1, total_bronze) * 100:.1f}% | Newest 15% temporal split (held out). |",
         "",
         "## 2. Temporal Split Boundaries & No-Leakage Verification",
         "",

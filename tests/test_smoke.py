@@ -40,7 +40,7 @@ def test_fake_llm_client():
     assert client.model_name == "fake-model-v1"
 
     messages = [{"role": "user", "content": "Sample complaint test"}]
-    resp = client.complete(messages)
+    resp = client.complete(messages, use_cache=False)
 
     assert resp.text == '{"issue_category": "Credit Reporting"}'
     assert resp.input_tokens > 0
