@@ -1,5 +1,5 @@
 # ---- Data ----
-data/
+/data/
 *.parquet
 *.csv
 !data/.gitkeep

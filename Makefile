@@ -1,7 +1,7 @@
 .PHONY: setup data train eval report app test lint clean all format
 
 VENV ?= .venv
-PYTHON := $(VENV)/bin/python
+PYTHON := PYTHONPATH=src $(VENV)/bin/python
 UV ?= $(shell which uv 2>/dev/null || echo /Users/krishnanamdev0101gmail.com/.local/bin/uv)
 
 # Default target

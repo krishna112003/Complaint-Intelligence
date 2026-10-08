@@ -1,5 +1,5 @@
--- 03_gold_features.sql: Produce feature-engineered model-ready dataset
--- Consolidates product categories and adds metadata features.
+-- 03_gold_features.sql: Feature engineering for model-ready Gold complaints
+-- Computes narrative length statistics and mask token frequencies.
 
 CREATE OR REPLACE TABLE gold_complaints AS
 SELECT
@@ -7,13 +7,17 @@ SELECT
     date_received,
     narrative,
     raw_product,
+    product,
     sub_product,
     raw_issue,
     sub_issue,
     company,
     state,
+    zip_code,
     submitted_via,
     company_response,
+    timely_response,
+    consumer_disputed,
     LENGTH(narrative) AS char_length,
     LENGTH(narrative) - LENGTH(REPLACE(narrative, ' ', '')) + 1 AS approx_word_count,
     ROUND(
