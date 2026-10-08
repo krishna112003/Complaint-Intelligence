@@ -26,9 +26,7 @@ data:
 
 # Train all classical and embedding models
 train:
-	$(PYTHON) -m complaints.models.tfidf_lr
-	$(PYTHON) -m complaints.models.tfidf_svm
-	$(PYTHON) -m complaints.models.embed_lgbm
+	$(PYTHON) -m complaints.models.train_all
 
 # Run evaluation and generate reports
 eval:

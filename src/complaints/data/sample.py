@@ -59,10 +59,10 @@ def sample(
 
     # Calculate sampling budget per class
     total_rows = len(df)
-    for product_name, group in df.groupby("product"):
+    for _product_name, group in df.groupby("product"):
         n_available = len(group)
         # Target proportional sample
-        prop_target = int(round(sample_size * (n_available / total_rows)))
+        prop_target = round(sample_size * (n_available / total_rows))
         # Cap at per_class_cap, min 1
         n_sample = min(n_available, max(1, min(prop_target, class_cap)))
 
