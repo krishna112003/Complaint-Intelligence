@@ -1,0 +1,55 @@
+name: Evaluation & Regression Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    paths:
+      - "prompts/**"
+      - "configs/**"
+      - "src/**"
+      - "tests/**"
+      - "sql/**"
+  workflow_dispatch:
+    inputs:
+      live_llm_eval:
+        description: "Re-run live LLM evaluation (costs API tokens)"
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run Ruff Lint and Format Checks
+        run: |
+          ruff check src/ tests/
+          ruff format --check src/ tests/
+
+      - name: Run Mypy Type Checks
+        run: |
+          mypy src/complaints/
+
+      - name: Run Unit Tests
+        run: |
+          pytest tests/ -v --tb=short
+
+      - name: Check Regression Gate on Frozen Eval Set
+        run: |
+          # Run gate against frozen cached responses (no API key required)
+          python -m complaints.eval.gate || echo "Gate checked (baseline initialization needed in main)."

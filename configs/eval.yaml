@@ -1,0 +1,29 @@
+# Evaluation configuration
+seed: 42
+
+# Bootstrap settings
+bootstrap:
+  n_resamples: 1000
+  confidence_level: 0.95
+
+# Multiple comparison correction
+multiple_comparisons:
+  method: "holm"  # holm, bonferroni
+
+# Regression gate thresholds
+gate:
+  macro_f1_drop_max: 0.02        # fail if macro-F1 drops by more than 2 points
+  schema_valid_rate_min: 0.98     # fail if schema-valid rate falls below 98%
+  cost_increase_max: 0.20         # fail if cost rises by more than 20%
+  bias_flip_rate_max: 0.05        # fail if name-swap flip rate exceeds 5%
+
+# Baseline metrics file (generated after first full eval)
+baseline_metrics_file: "reports/baseline_metrics.json"
+
+# CI evaluation set (frozen, small, cached responses only)
+ci_eval_set: "data/gold/ci_eval_set.parquet"
+
+# Calibration
+calibration:
+  n_bins: 10
+  strategy: "uniform"  # "uniform" or "quantile"

@@ -1,0 +1,48 @@
+# Data pipeline configuration
+seed: 42
+sample_size: 60000
+per_class_cap: 10000
+gold_set_size: 1000
+ci_eval_set_size: 200
+hand_check_size: 200
+
+# Minimum narrative length (characters) to keep
+min_narrative_length: 50
+
+# Source file (user downloads into data/raw/)
+raw_file: "data/raw/complaints.csv"
+
+# Paths
+bronze_dir: "data/bronze"
+silver_dir: "data/silver"
+gold_dir: "data/gold"
+cache_dir: "data/cache"
+
+# Split ratios (by date, not random)
+# oldest 70% → train, next 15% → val, newest 15% → test
+train_ratio: 0.70
+val_ratio: 0.15
+test_ratio: 0.15
+
+# Consolidated product label mapping
+# Maps raw Product values → consolidated categories (8-12 classes)
+# This will be refined after inspecting the real data in Phase 1.
+product_mapping:
+  "Credit reporting, credit repair services, or other personal consumer reports": "Credit Reporting"
+  "Credit reporting": "Credit Reporting"
+  "Debt collection": "Debt Collection"
+  "Mortgage": "Mortgage"
+  "Credit card or prepaid card": "Credit Card"
+  "Credit card": "Credit Card"
+  "Prepaid card": "Credit Card"
+  "Checking or savings account": "Bank Account"
+  "Bank account or service": "Bank Account"
+  "Student loan": "Student Loan"
+  "Vehicle loan or lease": "Vehicle Loan/Lease"
+  "Money transfer, virtual currency, or money service": "Money Transfer"
+  "Money transfers": "Money Transfer"
+  "Payday loan, title loan, or personal loan": "Personal Loan"
+  "Payday loan": "Personal Loan"
+  "Consumer Loan": "Personal Loan"
+  "Other financial service": "Other"
+  "Virtual currency": "Money Transfer"

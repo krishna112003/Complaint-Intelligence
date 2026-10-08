@@ -1,0 +1,59 @@
+# LLM configuration
+seed: 42
+
+# Active provider (one of: gemini, openai, azure_openai, fake)
+active_provider: "gemini"
+
+# Per-run budget cap (USD). Abort with a clear message when exceeded.
+budget_cap_usd: 5.00
+
+# Request settings
+request:
+  temperature: 0.0
+  max_tokens: 1024
+  timeout_seconds: 60
+
+# Retry settings (exponential backoff)
+retry:
+  max_retries: 3
+  initial_wait_seconds: 1.0
+  max_wait_seconds: 60.0
+  retry_on_status_codes: [429, 500, 502, 503, 504]
+
+# Cache settings
+cache:
+  enabled: true
+  backend: "sqlite"  # sqlite or disk
+  cache_dir: "data/cache/llm"
+
+# Few-shot retrieval
+few_shot:
+  n_examples: 5
+  retrieval_method: "embedding_similarity"  # only from train split
+
+# Provider configs
+providers:
+  gemini:
+    model: "gemini-2.0-flash"
+    # Pricing per million tokens (as of 2024-12-01)
+    pricing_as_of: "2024-12-01"
+    input_price_per_million: 0.075
+    output_price_per_million: 0.30
+
+  openai:
+    model: "gpt-4o-mini"
+    pricing_as_of: "2024-12-01"
+    input_price_per_million: 0.15
+    output_price_per_million: 0.60
+
+  azure_openai:
+    model: "gpt-4o-mini"
+    api_version: "2024-10-01"
+    pricing_as_of: "2024-12-01"
+    input_price_per_million: 0.15
+    output_price_per_million: 0.60
+
+  fake:
+    model: "fake-model-v1"
+    input_price_per_million: 0.0
+    output_price_per_million: 0.0
