@@ -23,6 +23,7 @@ from sklearn.metrics import accuracy_score, f1_score
 from complaints.config import get, get_project_root, setup_logging
 from complaints.llm.client import LLMClient, get_llm_client
 from complaints.llm.registry import format_untrusted_prompt, load_prompt
+from complaints.llm.schemas import repair_json_string
 from complaints.models.base import BaseModel
 from complaints.tracking.mlflow_utils import log_metrics_and_params, start_tracked_run
 
@@ -126,16 +127,27 @@ class LLMClassifier(BaseModel):
                 {"role": "user", "content": user_content},
             ]
 
-            response = self.client.complete(
-                messages,
-                temperature=0.0,
-                prompt_version=self.version_tag,
-                response_format={"type": "json_object"},
-            )
-
-            # Parse prediction
             try:
-                parsed = json.loads(response.text)
+                response = self.client.complete(
+                    messages,
+                    temperature=0.0,
+                    prompt_version=self.version_tag,
+                    response_format={"type": "json_object"},
+                )
+            except Exception as e:
+                # If quota or connection limits are reached, log cleanly and break with completed items
+                logger.warning(
+                    "LLM call interrupted on complaint_id=%s (%s). Preserving %d completed predictions.",
+                    row["complaint_id"],
+                    e,
+                    len(records),
+                )
+                break
+
+            # Parse prediction with JSON repair
+            repaired_text = repair_json_string(response.text)
+            try:
+                parsed = json.loads(repaired_text)
                 pred_label = parsed.get("product", "Other")
                 confidence = float(parsed.get("confidence", 0.90))
             except Exception:
@@ -178,7 +190,15 @@ def run_llm_classification(
     df_train = pd.read_parquet(train_path)
     df_val = pd.read_parquet(val_path)
 
-    model = LLMClassifier(client=client, few_shot=few_shot)
+    llm_client = client or get_llm_client()
+    logger.info(
+        "Estimated LLM calls for classification: %d (model: %s, few_shot: %s)",
+        len(df_gold),
+        llm_client.model_name,
+        few_shot,
+    )
+
+    model = LLMClassifier(client=llm_client, few_shot=few_shot)
     model.fit(df_train, df_val)
 
     with start_tracked_run(run_name=model.name) as run:

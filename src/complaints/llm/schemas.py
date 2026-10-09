@@ -94,24 +94,65 @@ class ClassificationOutput(BaseModel):
     confidence: float = 1.0
 
 
+def repair_json_string(raw_text: str) -> str:
+    """Repair common JSON formatting issues from small open-weights models.
+
+    - Removes markdown codeblock fences (```json ... ```)
+    - Extracts outermost curly-brace block { ... }
+    - Trims leading/trailing conversational filler
+    """
+    text = raw_text.strip()
+
+    # 1. Strip markdown fences
+    if "```" in text:
+        # Match content inside ```json ... ``` or ``` ... ```
+        match = re.search(r"```(?:json)?\s*([\s\S]*?)\s*```", text, re.IGNORECASE)
+        if match:
+            text = match.group(1).strip()
+        else:
+            text = re.sub(r"```(?:json)?", "", text).replace("```", "").strip()
+
+    # 2. Extract outermost { ... }
+    start_idx = text.find("{")
+    end_idx = text.rfind("}")
+    if start_idx != -1 and end_idx != -1 and end_idx > start_idx:
+        text = text[start_idx : end_idx + 1]
+
+    return text
+
+
 def validate_extraction_response(
     raw_json_str: str,
     original_narrative: str,
 ) -> tuple[ComplaintExtraction | None, dict[str, Any]]:
     """Validate raw model response against ComplaintExtraction schema and evidence constraint.
 
-    Returns:
-    - (parsed_model, audit_dict)
+    Applies JSON repair before parsing to accommodate free and small local models.
     """
     audit = {
         "schema_valid": False,
         "evidence_in_source": False,
         "error_message": "",
+        "repaired": False,
     }
 
+    # Attempt 1: Direct validation
     try:
         extraction = ComplaintExtraction.model_validate_json(raw_json_str)
         audit["schema_valid"] = True
+        audit["evidence_in_source"] = verify_evidence_in_source(
+            extraction.evidence_quote, original_narrative
+        )
+        return extraction, audit
+    except Exception:
+        pass
+
+    # Attempt 2: Repaired JSON validation
+    repaired_text = repair_json_string(raw_json_str)
+    try:
+        extraction = ComplaintExtraction.model_validate_json(repaired_text)
+        audit["schema_valid"] = True
+        audit["repaired"] = True
         audit["evidence_in_source"] = verify_evidence_in_source(
             extraction.evidence_quote, original_narrative
         )

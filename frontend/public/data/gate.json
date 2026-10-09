@@ -1,0 +1,44 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "name": "Macro-F1 Quality Drop",
+      "status": "FAIL",
+      "candidate_val": 0.6002,
+      "baseline_val": 1.0,
+      "delta": -0.39980000000000004,
+      "threshold": "Drop <= 2.00%",
+      "detail": "Observed drop of 0.3998 (limit: 0.0200)"
+    },
+    {
+      "name": "JSON Schema Validity",
+      "status": "PASS",
+      "candidate_val": 1.0,
+      "baseline_val": 1.0,
+      "delta": 0.0,
+      "threshold": "Valid Rate >= 98.00%",
+      "detail": "Observed 100.00% valid rate (min: 98.00%)"
+    },
+    {
+      "name": "Inference Cost Ceiling",
+      "status": "PASS",
+      "candidate_val": 0.0,
+      "baseline_val": 0.0,
+      "delta": 0.0,
+      "threshold": "Increase <= 20.0%",
+      "detail": "Observed candidate cost $0.0000/1k vs baseline $0.0000/1k"
+    },
+    {
+      "name": "Bias / Robustness Flip Rate",
+      "status": "PASS",
+      "candidate_val": 0.0,
+      "baseline_val": 0.0,
+      "delta": 0.0,
+      "threshold": "Flip Rate <= 5.00%",
+      "detail": "Observed flip rate 0.00% (max allowed: 5.00%)"
+    }
+  ],
+  "candidate_model": "candidate_prompt_v1",
+  "baseline_model": "tfidf_logistic_regression",
+  "updated_at": "2026-10-09T15:31:19.048594"
+}

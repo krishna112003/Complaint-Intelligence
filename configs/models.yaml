@@ -40,18 +40,6 @@ lightgbm:
   class_weight: "balanced"
   early_stopping_rounds: 50
 
-# Transformer fine-tune (optional, CPU smoke test only)
-transformer:
-  model_name: "distilbert-base-uncased"
-  max_length: 256
-  epochs: 3
-  batch_size: 16
-  learning_rate: 2.0e-5
-  warmup_ratio: 0.1
-  weight_decay: 0.01
-  truncation_strategy: "head"  # "head" or "head_tail"
-  fp16: false  # set true for GPU
-
 # Cross-validation
 cv:
   n_splits: 5

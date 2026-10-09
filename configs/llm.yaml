@@ -1,11 +1,12 @@
-# LLM configuration
+# LLM configuration: Free, OpenAI-compatible architecture
 seed: 42
 
-# Active provider (one of: gemini, openai, azure_openai, fake)
-active_provider: "gemini"
+# Active profile (one of: ollama, groq_free, gemini_free_tier, openrouter_free, fake, replay)
+active_profile: "ollama"
+active_provider: "gemini"  # legacy alias for backwards compatibility
 
-# Per-run budget cap (USD). Abort with a clear message when exceeded.
-budget_cap_usd: 5.00
+# Fallback provider if active profile is unreachable: "fake" (offline) or "replay" (cache-only)
+offline_fallback: "fake"
 
 # Request settings
 request:
@@ -13,46 +14,104 @@ request:
   max_tokens: 1024
   timeout_seconds: 60
 
-# Retry settings (exponential backoff)
-retry:
+# Rate limiting and retry settings (throttling + exponential backoff)
+rate_limit:
+  enabled: true
   max_retries: 3
-  initial_wait_seconds: 1.0
+  initial_wait_seconds: 2.0
   max_wait_seconds: 60.0
   retry_on_status_codes: [429, 500, 502, 503, 504]
 
-# Cache settings
+# Cache settings (Zero cost on cache hits)
 cache:
   enabled: true
   backend: "sqlite"  # sqlite or disk
   cache_dir: "data/cache/llm"
 
-# Few-shot retrieval
+# Few-shot retrieval strictly from train split
 few_shot:
-  n_examples: 5
-  retrieval_method: "embedding_similarity"  # only from train split
+  n_examples: 3
+  retrieval_method: "embedding_similarity"
 
-# Provider configs
+# OpenAI-Compatible Free Profiles
+# NOTE: Check each provider's current free-tier terms and rate limits.
+profiles:
+  # Default: Local Ollama (100% free, runs locally on CPU/RAM, no API key needed)
+  ollama:
+    base_url: "http://localhost:11434/v1"
+    model: "qwen2.5:3b"  # or llama3.2:3b, mistral, etc.
+    api_key_env: null
+    api_key_default: "ollama"
+    requests_per_minute: 60
+    max_tokens: 1024
+    timeout_seconds: 60
+
+  # Optional Free Cloud Profile: Groq Free Tier
+  groq_free:
+    base_url: "https://api.groq.com/openai/v1"
+    model: "llama-3.1-8b-instant"
+    api_key_env: "GROQ_API_KEY"
+    api_key_default: null
+    requests_per_minute: 30
+    max_tokens: 1024
+    timeout_seconds: 30
+
+  # Optional Free Cloud Profile: Google AI Studio Gemini Free Tier (OpenAI compatible endpoint)
+  gemini_free_tier:
+    base_url: "https://generativelanguage.googleapis.com/v1beta/openai/"
+    model: "gemini-2.0-flash"
+    api_key_env: "GEMINI_API_KEY"
+    api_key_default: null
+    requests_per_minute: 15
+    max_tokens: 1024
+    timeout_seconds: 60
+
+  # Optional Free Cloud Profile: OpenRouter Free Models
+  openrouter_free:
+    base_url: "https://openrouter.ai/api/v1"
+    model: "meta-llama/llama-3.2-3b-instruct:free"
+    api_key_env: "OPENROUTER_API_KEY"
+    api_key_default: null
+    requests_per_minute: 20
+    max_tokens: 1024
+    timeout_seconds: 60
+
+  # Fake client for zero-network testing and dry-runs
+  fake:
+    base_url: null
+    model: "fake-model-v1"
+    api_key_env: null
+    requests_per_minute: 10000
+    max_tokens: 1024
+    timeout_seconds: 5
+
+  # Replay client for frozen CI runs
+  replay:
+    base_url: null
+    model: "replay-client"
+    api_key_env: null
+    requests_per_minute: 10000
+    max_tokens: 1024
+    timeout_seconds: 5
+
+# Reference Pricing for Hypothetical Cost Reporting
+# Actual expenditure is $0.00. These figures compute hypothetical benchmark costs
+# for comparison against classical models. Fill in current market prices as needed.
+reference_pricing:
+  as_of: "2026-10-01"
+  notes: "Hypothetical cost, at reference pricing. Actual expenditure is $0.00."
+  # Reference prices per million tokens
+  input_price_per_million: 0.15
+  output_price_per_million: 0.60
+
+# Legacy compatibility section
+budget_cap_usd: 5.00
 providers:
   gemini:
     model: "gemini-2.0-flash"
-    # Pricing per million tokens (as of 2024-12-01)
-    pricing_as_of: "2024-12-01"
+    pricing_as_of: "2026-10-01"
     input_price_per_million: 0.075
     output_price_per_million: 0.30
-
-  openai:
-    model: "gpt-4o-mini"
-    pricing_as_of: "2024-12-01"
-    input_price_per_million: 0.15
-    output_price_per_million: 0.60
-
-  azure_openai:
-    model: "gpt-4o-mini"
-    api_version: "2024-10-01"
-    pricing_as_of: "2024-12-01"
-    input_price_per_million: 0.15
-    output_price_per_million: 0.60
-
   fake:
     model: "fake-model-v1"
     input_price_per_million: 0.0

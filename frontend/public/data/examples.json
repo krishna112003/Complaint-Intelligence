@@ -1,0 +1,1644 @@
+{
+  "examples": [
+    {
+      "complaint_id": "2726185",
+      "narrative": "In XXXX XXXX I was hired as a Manager for a company that sent me a check in there name for about {XXXX} and I decided to open an account at Santander Bank in my local neighborhood and requested that they check out the check for me and if it was good to place it within my bank checking account if it cleared, where this was a new company that I was not familiar with. They decided to follow through and opened the account and told me that it would take ten days for the check to clear but had told me that I would have to open an account and deposit physical cash in it, which I did for {XXXX}. After ten days I had n't hear anything back from the bank in regards to the deposit of the check and when I went to make a withdraw from the bank on the check, they told me that my account was closed and they never told me for what or sent my deposit back since then. I never pursued it after that and realized the check I had deposited must had been bad but I decided to open an account again after a couple of years had passed in XXXX of this year and told the rep of the problem I had with the bank a couple of years ago and spent well over two hours seeking to clear whatever issues they had with me and my account and I thought we had a understanding and was going to make a new start, so I again opened up an account and placed another deposit of XXXX to do so and was given a online banking account with new account numbers and after a couple of days had passed, I logged onto my online account and was ready to transfer funds from another company that I performed work for and found that I was on block and when I called the customer service they gave the run around for a good minute but after my persistence after several tries and days had passed that it was the XXXX XXXX issue that they had decided to close my account that was XXXX XXXX, XXXX and that they would send me my deposit back via mail, where it is now going on a month since they closed my account and never sent me my deposit back. Which I ca n't understand why they would close my account in the first place for a bad check that someone else wrote, where I had always been in good standings with other accounts I have had over the years with other banks and had paid many bank fees over my many years, where I also believe that they are real crooks and out right have chosen to take people money for their own and are the ones that ca n't be trusted.",
+      "true_label": "Bank Account",
+      "word_count": 487,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Bank Account",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Bank Account",
+          "confidence": 0.9629,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Bank Account",
+          "confidence": 0.9364,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Bank Account",
+          "confidence": 0.9949,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726223",
+      "narrative": "In XXXX XXXX, I was contacted by XXXX XXXX with XXXX XXXX XXXX stating she was attempting to collect on a debt on behalf of XXXX XXXX and threatened to file a lawsuit against me if I did not resolve the matter. Naturally, fearing a lawsuit, I agreed to pay the debt over a period of 2 months. However, recently, on XXXX/XXXX/XXXX, I was contacted by XXXX with XXXX and XXXX stating she was reaching out to me in regards to the same XXXX XXXX debt. She stated the debt was fro XXXX in the amount of {$7600.00} and she too indicated the matter needed to be resolved and threaten to file a lawsuit in my jurisdiction if it was not. I informed her that this debt had already been settled and that I would review my records and contact her to provide her with the information but she did not care. She was rude and right out abusive and continued to threat litigation stating it was not the same debt. However, I never had more than one account with XXXX XXXX. I was able to get off the phone with her and reviewed my records. Having the contact information for XXXX I attempted to contact her but when I tried to call her the line would ring and then sound busy. I then decided to email her and of course the email was returned undeliverable, and it was then that I realized I may have been a victim of a scam by XXXX and XXXX XXXX XXXX and that the XXXX XXXX debt may still be outstanding so I reached back out to XXXX and she confirmed that it appeared I was a victim of a scam but and that regardless I had to resolve the debt she was collecting on behalf of XXXX XXXX. I was so distraught seeing as I had paid {$3400.00} to XXXX XXXX XXXX and the debt was still outstanding. Therefore, fearing the immediate filing of a lawsuit by XXXX and XXXX, I set up a payment plan with XXXX and her colleague, XXXX, to settle this debt. They instructed me to contact my bank and file a claim for the payments paid to XXXX XXXX XXXX but in the meantime scheduled payments to resolve what would be the remaining balance once my bank returned the $ XXXX and I in turn remitted those funds to XXXX and XXXX. However, because I realized I was initially scammed I immediately thought this was another scam and reached out to XXXX XXXX directly and they informed me that the account had transferred to XXXX XXXX XXXX XXXX not XXXX and XXXX. It turns out the original XXXX XXXX account has been sold and transferred to at least 4 companies. XXXX XXXX XXXX XXXX transferred it to XXXX who then transferred it to XXXX XXXX XXXX XXXX and they in turn transferred it to Razor Capital. Each time I contacted the new account holder I was provided with the phone number and that is how I have been able to determine who actually is the account holder. Unfortunately, I have been trying to reach the last know account holder, Razor Capital, to determine if they sill hold the account or the new holder information to determine if XXXX and XXXX is indeed the current account holder but I have been unsuccessful. Needless to say, I had to cancel my debit card and tried to file a claim with my bank for the monies paid to XXXX XXXX XXXX ; however, due to the lapse in time, I was not able to successfully file a claim over the phone ; the claim has to be filed via mail. Either way, my bank cancelled my debit card and XXXX and XXXX was unsuccessful in debiting the second payment of {$560.00} ; the initial payment was for {$1000.00} against my XXXX but I have also cancelled that card and filed a claim for that charge and the charge by XXXX XXXX XXXX ( I used my XXXX to pay a portion to them as well ). Seeing as the payment did not go through XXXX contacted me again today, XXXX/XXXX/XXXX regarding the payment. I informed her that per her instructions I contacted my bank and cancelled my card, which is why today 's payment did not go through. She then questioned how my bank planned on refunding me the monies from my claim if my card was cancelled, which was odd to me because the cancellation of my card is irrelevant to funds being potentially credited back to my account due to a fraud claim so I proceeded to ask her relevant questions that would assist me with determining if she and the company she worked for were legitimate. She stated the account holder was XXXX XXXX and XXXX XXXX and she was collecting on their behalf. She also provided me with XXXX 's NY license number as XXXX but was unable to provide me with their address or phone number or an account number linked to me so that I can provide with my deposit yet she advised she would reach out to XXXX to contact me with this information and also request that she send the documents regarding the settlement that she was to send me yesterday. In the meantime, she stated that I needed to go to my bank and deposit today 's payment to XXXX 's account and coincidentally enough they held an account with my same bank. After getting off the phone with her I reached out to my bank to confirm the account information but of course they were unable to provide me with any information. At this point I am seeking information from Razor Capital regarding this debt. Do they currently hold this debt or if it was transferred to who was it transferred? I am fearful that I am being scammed again but am also fearful of being sued if it turns out that XXXX XXXX and XXXX is the true holder of the debt and XXXX and XXXX is collecting on their behalf. With that said, I would also like for XXXX and XXXX to validate the debt.",
+      "true_label": "Debt Collection",
+      "word_count": 1037,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.9721,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.7638,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.6294,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726382",
+      "narrative": "A XXXX XXXX XXXX XXXX FROM XXXX XXXX XXXX WILL NOT STOP CALLING MY PLACE OF EMPLOYMENT ..I HAVE REPEATEDLY TOLD THEM NOT TO CALL MY EMPLOYMENT AND TO CALL MY CELL PHONE ONLY..THEY XXXX ME TO THE POINT I DO NOT EVEN ANSWER MY PHONE..AND BLOCK EVERY SINGLE NUMBER THAT IS UNKNOWN TO ME..",
+      "true_label": "Debt Collection",
+      "word_count": 55,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8304,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8587,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8959,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726353",
+      "narrative": "I initially disputed this debt with the credit bureaus back in XXXX XXXX, with the results being that the account was verified as being mine. I have since sent the collection agency request for debt validation to the fax number that has been provide by them, however they repeatedly say they did n't get the faxes though the faxes state they were successfully transmitted. I have spoken with a representative at this collection agency and was advised of the company they were collecting on the behalf of. I contacted the company that is listed as the Original Creditor that this collection is \" supposedly '' collecting on the behalf of and they do n't have any information in their systems for me nor that I ever had an account with them in any way. I was advised by XXXX at Capstone that they were collecting on behalf of a property management company by the name of XXXX, after doing extensive research and placing calls to the company that I did find with this name, they have never been affiliated with anyone \" supposedly involved '' with this account, not Capstone Credit & Collections nor River Oaks Apartments. In fact, Florida is a state in which companies must be registered and licensed, and the XXXX company I pulled up is not \" licensed '' and is not active. I have sent them this information and they continue to report this account to the credit bureaus.",
+      "true_label": "Debt Collection",
+      "word_count": 244,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.955,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.9323,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.9723,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726308",
+      "narrative": "I called XXXX XXXX in XXXX, AZ on XXXX XXXX today, XXXX XXXX, 2017 to pay off my title loan in full because the car no longer runs & I dont use it, so need to junk car. Last statement amount is {$510.00} but they charge interest daily. Im changing bank accounts & had debit card from my joint account instead of account they have on file. Was told I could not pay off my loan in full except with card on file over the phone, only make a 1 time installment payment for the minimum amount. I told them I couldnt come into the store because I moved out of area. True. The location is in XXXX, AZ & I live over an hour away in XXXX, AZ. They wouldnt take money from me/let me pay off loan. I told them repeatedly I found it odd they didnt want to take my money & it seemed like they didnt want the money & if they wanted their money they needed to let me pay off the loan or they could just have the car. They refused both. I asked to speak to a manager. First woman claimed to be a manager, so I requested to speak to someone above her. She finally agreed after I insisted & put me on hold for several minutes. Then another woman got on the line & claimed to be a manager. Im not convinced either employees were really managers. She told me I couldnt pay loan off or give them the car & they had a lien on the car so I had to make payments. It made no sense. I want to pay loan so I did something Im not proud of, I lied & said I moved to California & couldnt come to location. She still wouldnt let me pay the loan off. I asked to speak to her boss. She told me she was the boss. I told her she must have a boss. She told me to call corporate XXXX number & leave a message. I went to website where theres zero information on paying off loans, only information on taking out title loans. I filled out a contact form asking why it was impossible to pay off loan & telling them if they wouldnt allow me to pay off the loan, I was having car towed to their XXXX location this weekend & that the account they have on file is being closed.",
+      "true_label": "Personal Loan",
+      "word_count": 415,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Personal Loan",
+          "confidence": 0.933,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Personal Loan",
+          "confidence": 0.9085,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Personal Loan",
+          "confidence": 0.9728,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726173",
+      "narrative": "Dear Consumer Financial Protection Bureau I am writing you to explain fraudulent activity that Capital One Bank was instrumental in allowing thieves to take advantage of me and they should be instrumental in correcting the wrong. The details of this fraudulent crime affects my Capital One accounts, XXXX and XXXX XXXX. Please keep in mind I have called Capital One 13 times and have written Capital One three times and have sent the letters certified and faxed them to their Fraud Department. The letters were dated XX/XX/XXXX, XX/XX/XXXX, andXX/XX/XXXX The Capital One case numbers are available upon request. In XXXX, I was searching for a new job. I received an email from a company stating that they had reviewed my resume on XXXX and was interested in me. The company name is XXXX XXXX XXXX ( EMV ) and was a subsidiary of XXXX XXXX. They were opening branch offices in the USA. They sent me a company information package. I did some research on the company and believed it to be legitimate. I was working with their representative XXXX XXXX, located at XXXX XXXX, XXXX XXXX, XXXX XXXX, NY, XXXX. Her phone number is ( XXXX ) XXXX. Her email is XXXXXXXXXXXX On XX/XX/XXXX, they extended me an offer as a Regional Manager for XXXX & XXXX XXXX XXXX. My start date would be XX/XX/XXXX. I would be on a two week probationary period and after that time I would be issued a corporate credit card. So that I would not be out any money, during the first two weeks, they would supply me with account numbers and routing numbers to make purchases on their behalf. I would post payments to my credit card account and then make purchases locally and send the items to their main headquarters in XXXX. I decided to initiate my first transaction. They sent me the XXXX XXXX bank information. I called XXXX XXXX to insure it was a valid account and XXXX XXXX confirmed it was. I made a deposit of {$13000.00} into my Capital One XXXX account on XX/XX/XXXX I confirmed my online account information reflected that the deposit had been made ; I also called Capital One onXX/XX/XXXX at XXXX XXXX MST to insure that the deposit had posted and funds were actually available for use. Capital One assured me that the funds did post and the funds were available for use. I proceeded to make the purchases requested from XXXX. I used both my XXXX and XXXX. I also checked with Capital One to insure everything was OK. Again I was assured everything was fine and the funds were available for use. My online accounts also reflected that the deposits had posted, reflected deposits paid and funds were available. The notations were quite clear that the deposits were PAID. They were not pending, but PAID. I then received information stating that the deposit from XXXX XXXX was returned. I immediately contacted XXXX. They assured me that everything was fine and was a clerical error. They told me to use a CHASE account number. Again, I contacted CHASE to verify the account and contacted Capital One who assured me that everything was fine and Capital One had the deposit. Shortly after Capital One reassured me that everything was fine I completed the purchases and sent the items to XXXX as instructed. I would have never completed any purchases unless I had the confirmation from Capital One that the deposits had been made, were paid, and were available for use. I got in contact with XXXX XXXX fraud departments as soon as I received additional deposit returns. I have records noting deposits paid and available balances. I also reported this to the FBI and FTC and had the FTC report numbers added to my account transcript. I have also notified the Secret Service, XXXX Police Department, and the Arizona Attorney Generals office. I called Capital One thirteen times and talked to several people from XX/XX/XXXX through XXXX. Here is a partial list of the people I talked with. Person Date XXXXXX/XX/XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX XXXX I dont think I acted irresponsibly since I had the assurances from Capital One that the deposits had posted and the funds were available, confirmed by phone and online account information. Here is a list of the deposits, returned payments, & fraudulent charges made under this crime that Capital One helped complete. Capital One Deposits : XXXX XXXX ending in XXXX deposit onXX/XX/XXXX for {$13000.00} ( XXXX XXXX ) a XXXX card ending in XXXX deposit onXX/XX/XXXX for {$13000.00} ( XXXX XXXX ) b XXXX card ending in XXXX deposit onXX/XX/XXXX for {$13000.00} ( XXXX XXXX ) c XXXX card ending in XXXX deposit on XX/XX/XXXX for {$12000.00} ( XXXX XXXX ) d XXXX XXXX ending in XXXX deposit onXX/XX/XXXX for {$4200.00} ( XXXX XXXX ) e XXXX XXXX ending in XXXX deposit on XX/XX/XXXX for {$4100.00} ( XXXX XXXX ) f Capital One Returned Payments : XXXX XXXX ending in XXXX returned onXX/XX/XXXX for {$13000.00} ( XXXX XXXX ) a XXXX card ending in XXXX returned on XX/XX/XXXX for {$13000.00} ( XXXX XXXX ) b VISA card ending in XXXX returned onXX/XX/XXXX for {$13000.00} ( XXXX XXXX XXXX c XXXX card ending in XXXX returned on XXXX for {$13000.00} ( XXXX XXXX ) d Master Card ending in XXXX returned onXX/XX/XXXX for {$4200.00} ( XXXX XXXX ) e Master Card ending in XXXX returned onXX/XX/XXXX for {$4100.00} ( XXXX XXXX ) f Fraudulent Purchases : XXXX XXXX ending in XXXXXX/XX/XXXX XXXX XXXX ( XXXX ) charges for {$2000.00} each = {$6000.00}XX/XX/XXXX XXXX, ( 1 ) charge for {$200.00}, ( 1 ) for {$500.00}, ( 1 ) for {$1000.00}, ( 2 ) for {$2000.00} = {$5700.00} XX/XX/XXXX Home Depot, ( 1 ) charge for {$500.00}, ( 1 ) for {$1000.00} = {$1500.00} XX/XX/XXXX XXXX XXXX, ( 1 ) charge for {$3000.00} = {$3000.00} XX/XX/XXXX XXXX XXXX, ( 1 ) charge for {$10000.00} = {$10000.00} Fraudulent Purchases : XXXX XXXX ending XXXX XXXX/XXXX/XXXX - On XXXX XXXX ending XXXX to XXXX for {$4200.00} I hate to say this but Capital One flat out lied to me. They also misrepresented the status of my accounts and have aided in perpetuating fraud in the credit card industry. Here are the reference numbers of my filings : Capital One Reference/Case Numbers : Upon request Federal Trade Commission File Numbers : Upon request Arizona Attorney General File Number : Upon request City of XXXX Police Department Report Number Upon request Additionally, the FBI and U.S. Secret Service were notified however their case numbers were not disclosed to me. Again, Capital One lied to me and misrepresented the balances of my accounts, repeatedly. Capital One seems to be perpetuating this type of fraud by misrepresenting the status and balances of their customers accounts. I would like Capital One to treat the charges listed above as fraud charges/cases, credit my account for these charges, and reinstate my accounts and balances to the status prior to the fraudulent activity.",
+      "true_label": "Credit Card",
+      "word_count": 1178,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Bank Account",
+          "confidence": 0.4088,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Card",
+          "confidence": 0.8334,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Card",
+          "confidence": 0.9246,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726405",
+      "narrative": "I received request from Diversified that they were trying to collect this debt that is not mine. I mailed them a certified letter that was signed for requesting them to verify this debt with proof of application, signature on application, all accounting information of this debt. This was signed for by someone in there office as I have the receipt. They did not send me proof of validation of this debt and this was previously deleted from my credit by a different agency as they seen this was not my account. Now today I see this has been added to my credit report! this is violated my FCRA rights and I need answers!",
+      "true_label": "Debt Collection",
+      "word_count": 113,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.9584,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.9682,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.9887,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726264",
+      "narrative": "made a deposit to my account XX/XX/2017 {$36.00} it still has not been posted to my paypal account Please see supporting documents",
+      "true_label": "Credit Card",
+      "word_count": 22,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Bank Account",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Bank Account",
+          "confidence": 0.3448,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Bank Account",
+          "confidence": 0.7229,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Bank Account",
+          "confidence": 0.8572,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726664",
+      "narrative": "SElect Portfolio Servicing has posted the notice of foreclosure and will be held for sale on XXXX/XXXX/XXXX. I called and spoke to the loss mitigation dept to apply for a modification of my XXXX interest only mtg I have paid for 10 years and they claim Im to late to modify my home loan. Their policy states that this must be done 37 days before the date of the sale. This is not what my attorney says nor the State of Michigan laws, I have to file for this before the sale date of XXXX/XXXX/XXXX. The person at select portfolio servicing says I can only pay in full or get up to XXXX cash for keys. They refuse to help me. My husband has not been able to work much due to a back injury and XXXX XXXX. The mortgage company sent me an appraisal of a value of XXXX. I owe XXXX. This home never regained equity. I had to file XXXX in XXXX due to the economy and the career I had. I worked for a Builder for 10 years and my income was XXXX per year, lost my job due to the builder losing everything. However I did go back to work at my old place of employment. My income dropped from the XXXX to XXXX. I have done the best I can to keep my home. I have been turned down twice for a modification in the past. They say I dont qualify. This is not a XXXX XXXX or XXXX XXXX loan. I am being refused the option to modify my mortgage.",
+      "true_label": "Mortgage",
+      "word_count": 267,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": true
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Mortgage",
+          "confidence": 0.9395,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Mortgage",
+          "confidence": 0.9826,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Mortgage",
+          "confidence": 0.9997,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726636",
+      "narrative": "I was issued XXXX XXXX Debit card ending in XXXX which happened to be a fake one, not associated to me records. I turned this fake fraudulent card to a bank in XXXX at XXXX XXXX The real debit card end in XXXX has been used for over 150 transaction without my authorization or consent. My case was denied because they say I authorized this transaction which impossible because I never had that card ending in XXXX. They have been un willing to connect to explain or reasoning for this arbitrary decision. This effects my credit and my identity. Wells Fargo also seem very un concerned that the fake debit card I returned was an issue. I would like my case to approved in a more timely manner and Wells Fargo held accountable.",
+      "true_label": "Credit Card",
+      "word_count": 133,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Bank Account",
+          "confidence": 0.5214,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Bank Account",
+          "confidence": 0.7151,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Bank Account",
+          "confidence": 0.9077,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726009",
+      "narrative": "Previous credit line : {$20000.00} Current credit line : {$5000.00} at one point it was at {$1000.00} on XXXX/XXXX/XXXX I paid my full balance of {$19000.00} after being a Natural Disaster victim of XXXX XXXX. My business in XXXX has suffered with all my contractors in the center of the storm with all my inventory. Anyways, I called XXXX XXXX XXXX in regards to my situation and it got dismissed. Then before I paid I saw my credit line still at {$20000.00}. So I decided to pay my balance to free up my available credit. By doing so, Barclay decided to reduce my card line to {$1000.00}. After frightening seeing that I called and after a long call they increased it to {$5000.00}. Barclay never notified me in any way ( mail, phone call or email ). Please help increase it back to {$20000.00}. I called again and they refuse to help me.",
+      "true_label": "Credit Card",
+      "word_count": 153,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Card",
+          "confidence": 0.8692,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Card",
+          "confidence": 0.8651,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Card",
+          "confidence": 0.9517,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726707",
+      "narrative": "My Identity Information has previously been compromised and used to open several accounts and Inquiries without my permission. These are just some of the accounts that were opened that I do n't recognize. Source Receivables Management/ XXXX Date Opened XXXX XXXX, 2017 {$220.00}",
+      "true_label": "Debt Collection",
+      "word_count": 43,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.4453,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.6697,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.6796,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726716",
+      "narrative": "Regarding Navient student loan payment ofXX/XX/XXXXof XXXX. I think it is unfair that I have to make this one payment of {$150.00}. The recertification period, starting on XX/XX/XXXX. I filled out the I.B.R. annual recertification on-line. On XX/XX/XXXX I received notice from Navient that they needed a copy of my paystub, which I mailed immediately. I do not have access to a scanner, so I had to mail document. Later I received notice that they needed further clarification. I then had to mail another paystub to them. These delays resulted in this incorrect billing of {$150.00} between the I.B.R annual zero-payments of XX/XX/XXXXand the current I.B.R annual zero-payments for the period ending of XX/XX/XXXX. Your help in resolving this matter would be greatly appreciated. Thank you.",
+      "true_label": "Student Loan",
+      "word_count": 126,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Student Loan",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Student Loan",
+          "confidence": 0.9414,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Student Loan",
+          "confidence": 0.8721,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Student Loan",
+          "confidence": 0.925,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726552",
+      "narrative": "XXXX used fraudulent dealers to open an account in XXXX XXXX, 2009. XXXX is misrepresenting the amount of debt and liability that I have for this auto loan. I would like this item to be removed from my credit. They are falsely reporting a debt owed on my credit report as {$15000.00}.",
+      "true_label": "Credit Reporting",
+      "word_count": 52,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Personal Loan",
+          "confidence": 0.8266,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.6658,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.5914,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726570",
+      "narrative": "XXXX XXXX XX/XX/XXXX I did not authorize this inquiry tried calling equifax to get this taken care of 3 times they said there is nothing they can do. XXXX XXXX XXXX and XXXX XX/XX/XXXX I did not authorize these inquiry tried calling and writing equifax they too again says it has to stay on my report after i stated I Maybe a victim of fraud",
+      "true_label": "Credit Reporting",
+      "word_count": 65,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9754,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9181,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9973,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726815",
+      "narrative": "Sent letters to credit bureaus ( XXXX and XXXX ) on XX/XX/XXXX and collection company on XX/XX/XXXX. No satisfactory response actually validating the accounts. Only received statements from Credit Bureaus saying account was verified by collection company. As of today no response from the collection company.",
+      "true_label": "Debt Collection",
+      "word_count": 46,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.6415,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8167,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8078,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726920",
+      "narrative": "XXXX XXXX has repeatedly sent me a collections bill for a XXXX account that I have no knowledge of. On the bill itself the identified person is XXXX XXXX XXXX .. That is not my name. I tried to dispute this with them by sending tax documents and even a copy of my social that shows that my correct name. I 've called several times and made several attempts to resolve this matter and delete this collection account on my report since it 's not only hurting my credit but it 's FALSE information. Thank you.",
+      "true_label": "Debt Collection",
+      "word_count": 96,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.5735,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.5733,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.5377,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726855",
+      "narrative": "I had previously sent fraud affidavits to TransUnion to get the following accounts which resulted in fraud removed from my credit history. They have failed to properly investigate and remove the disputed items below. XXXX with balance of XXXX} - FRAUD XXXX XXXX with balance of XXXX} - FRAUD XXXX XXXX with balance of XXXX - FRAUD XXXX XXXX LOANS with balance of XXXX - FRAUD XXXX XXXX XXXX with balance of XXXX - FRAUD I have sent 2 previous letters to TransUnion, all by certified mail requesting that they remove inaccurate information from my file along with the fraud affidavits and they have failed to do so. Accordingly, I can show a judge that these accounts are inaccurate and that they violated the Fair Credit Reporting Act by ignoring my requests to investigate the items. My previous lettersall sent certified mailstated my reasons for an investigation and these reasons were not frivolous in any way. If this final request does not prompt them to conduct a proper investigation of the accounts in question and send proof to me of said investigation, I will file a civil suit in XXXX XXXX for damages. I take my credit very seriously and their lack of professionalism and assistance is unacceptable. I am well aware of my rights under the FCRA and intend to pursue them to the maximum.",
+      "true_label": "Credit Reporting",
+      "word_count": 226,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9504,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.953,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9965,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2727077",
+      "narrative": "Shermeta law group is fraudulent cashing check 's made payable to XXXX XXXX and not reporting the payments to my credit bureau since XXXX XXXX. My Payment 's are current and now they filed default judgement againt 's, I am a XXXX Employee that is XXXX and have XXXX. XXXX XXXX XXXX and their Client XXXX XXXX are in Violation of XXXX XXXX XXXX 's code of conduct and zero tolerance anti harassment that covers all XXXX XXXX division and entity 's including their Client XXXX XXXX. A complaint has been filed with XXXX XXXX XXXX of XXXX XXXX, XXXX XXXX HR againt 's XXXX XXXX and XXXX XXXX XXXX, a Complaint has also been filed with XXXX and XXXX. They have also caused me to be evictied by not working with me when I was on layoff XXXX, and Ca n't afford my medications, These companies will not stop harassing me and making me sick with XXXX XXXX and XXXX. Maybe XXXX and their Client XXXX XXXX should review XXXX XXXX 's code of conduct and the zero tolerance harassment, legal action can be sought after XXXX and XXXX XXXX for violation of policy. Make them report those payments to my credit bureau and stop harassing me. Please. Everytime a complaint is filed I get no answer to the question, WHY ARE MY PAYMENT 'S NOT BEING REPORT TO MY CREDIT BUREAU????. I WILL KEEP FILING COMPLAINT 'S DAILY TILL I GET THAT ANSWER? Why will they not answer that question? Do I have to go daily to there office or to shermeta 's attorney house to get a answer??? This also need 's to be sent to XXXX XXXX. Thank you.",
+      "true_label": "Credit Reporting",
+      "word_count": 283,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.47,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.4521,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.3122,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726872",
+      "narrative": "Accounts have been separated multiple times, i am a XXXX and my social security number and name keeps getting merged with my XXXX sibling whos name is very similar to mine, our social security numbers are very close as well. I can not access anything and the credit reporting agencies think i do not exist.",
+      "true_label": "Credit Reporting",
+      "word_count": 55,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8649,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.5103,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.4433,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726870",
+      "narrative": "Accounts have been separated multiple times, i am a twin and my social security number and name keeps getting merged with my twin sibling whos name is very similar to mine, our social security numbers are very close as well. I can not access anything and the credit reporting agencies think i do not exist.",
+      "true_label": "Credit Reporting",
+      "word_count": 55,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8014,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.5509,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.4756,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2726840",
+      "narrative": "Capital One posted two consecutive late pays to my account in XXXX and XXXX. My account showed no payment due in XXXX and I made ( 3 ) payments to my capital one account in XXXX. I believe capital has not been reasonable. I have had capital one for over four years and this has been the first hiccup ever.",
+      "true_label": "Credit Card",
+      "word_count": 60,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Card",
+          "confidence": 0.498,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Card",
+          "confidence": 0.8631,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Card",
+          "confidence": 0.9082,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2727293",
+      "narrative": "I have contacted the Credit Reporting Agencies about the hard inquiries on my credit report and have been told to contact the companies who requested the report and to have them deleted. I called XXXX XXXX XXXX XXXX and have been told they do no delete hard inquiries even though I did not authorize the inquiry. I called back Transunion to advise them of the statement from XXXX XXXX XXXX XXXX. I have disputed and written letters and I have been continuously told by Transunion the hard inquiry will not be deleted even though I did not authorize anyone to check my credit file. I am asking for your help because I am given the same answer which is not fair to me as the credit when I did not not ask for the hard inquiry with XXXX XXXX XXXX XXXX. I have continued to request a deletion to no avail. Please advise if you can assist me with this.",
+      "true_label": "Credit Reporting",
+      "word_count": 160,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9473,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9612,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9987,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2728133",
+      "narrative": "Date:XX/XX/2017 Company : TransUnion Situation : The company supplies the free credit report without a fico or any sort of credit score. When trying to obtain a credit score, the company forces you to click on a link to \" view credit score '' which they then automatically sign you into a {$19.00} per month subscription without warning or confirmation of payment. They first ask for credit card information beforehand without any information as to why ( i.e. no amount to pay shown ). Because one has been primed to supply private information for credit report, one is led to believe this is just another step to obtain a credit score. When I noticed the charges, I had to call and cancel to get a refund. Others may not have paid attention to this and may have recurring payments to TransUnion. The website was accessed by requesting a free credit report from : XXXX and choosing TransUnion.",
+      "true_label": "Credit Reporting",
+      "word_count": 157,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.934,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9264,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9937,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2727290",
+      "narrative": "I contacted Great Lakes on XX/XX/XXXX in reference to two alleged late payments on XX/XX/XXXX ( 30 Days ) and XX/XX/XXXX ( 90 Days ). I reviewed the information that was provided to me by Great Lakes and I disagree with this information reporting via XXXX, XXXX, and XXXX. I never was late on these accounts.",
+      "true_label": "Credit Reporting",
+      "word_count": 56,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.2099,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Student Loan",
+          "confidence": 0.4978,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Student Loan",
+          "confidence": 0.5337,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2727961",
+      "narrative": "On XXXX XXXX,2017 Navy Federal Credit Union Transferred {$710.00} from my savings account to my home improvement loan with out my permission and refused to put it back even after I told them the money was for personal things given to me by my lawyer to live on until about the XXXX of XXXX when my settlement comes in and I intend to pay off my loans in full.",
+      "true_label": "Bank Account",
+      "word_count": 69,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Bank Account",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Personal Loan",
+          "confidence": 0.2733,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Bank Account",
+          "confidence": 0.3081,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.2737,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2727972",
+      "narrative": "My student loan is due on the XXXX of the month. Today is the XXXX. So far I have received two calls today already from Navient. This happens any time that the payment is *late* ( however well within the grace period ). The first call was at XXXX XXXX my time.",
+      "true_label": "Debt Collection",
+      "word_count": 52,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Student Loan",
+          "confidence": 0.9141,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Student Loan",
+          "confidence": 0.9059,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Student Loan",
+          "confidence": 0.9609,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2728051",
+      "narrative": "I contacted Midland Funding on XX/XX/XXXX to request a hardship on a XXXX XXXX ( XXXX ) collection account. After reading in Midland Fundings website it clearly states : -We suspend collection activities when a consumer demonstrates that he or she is experiencing significant financial hardship due to medical issues. -We suspend collection activities when a consumer is a direct victim of a natural or other catastrophic disaster. -We cease collection activities when we receive documentation indicating that the consumers only source of income is from exempt sources, such as Social Security or Supplemental Security Income benefits, and that the consumer has access to no other assets. We work with and are sensitive to consumers who encounter unforeseen circumstances, such as job loss. I informed the company of my medical diagnosis \" XXXX XXXX '' I was diagnosed in XX/XX/XXXX. Because of XXXX treatment I was unable to maintain my employment with XXXX XXXX. I lost my housing during that time as well. Over the last 2 months my children and I have lived at XXXX XXXX. And I receive {$380.00} monthly in child support. On XX/XX/XXXX I faxed over documents : verification of shelter stay, and court ordered child support. I was told by my account manager that I did not qualify for a hardship. I stated THEIR company verbiage that according to them qualifies you for a hardship ; which is listed not their website. I was instructed to resubmit the documents and I would be notified through mail. I told my account Rep that I did n't have a current address, she then stated that she would contact me via telephone with the status approval/denied. As of today XX/XX/XXXX I have not been contact by anyone at Midland Funding LLC.",
+      "true_label": "Debt Collection",
+      "word_count": 293,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Bank Account",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.9071,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.6586,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.5251,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2728062",
+      "narrative": "I have not been receiving the XXXX XXXX Reward Points posted to my XXXX XXXX account by Barclays the issuer of the XXXX XXXX Visa Card. I have been awarded unposted point totals of XXXX on XX/XX/XXXX, XXXX points on XX/XX/XXXX XXXX points on XX/XX/XXXX and XXXX on XX/XX/XXXX. I I sent the company an e-mail on XX/XX/XXXX, but the company has still not addressed the issue.",
+      "true_label": "Credit Card",
+      "word_count": 67,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Card",
+          "confidence": 0.8915,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Card",
+          "confidence": 0.8829,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Card",
+          "confidence": 0.8944,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2728226",
+      "narrative": "I have a XXXX credit card. They reported back in XX/XX/XXXX a balance of {$500.00}. It is now mid XX/XX/XXXX and they still are not updating the credit bureaus that the balance is XXXX. I spoken to them several times with no help.",
+      "true_label": "Credit Reporting",
+      "word_count": 43,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Card",
+          "confidence": 0.7551,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Card",
+          "confidence": 0.5184,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Card",
+          "confidence": 0.483,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2728231",
+      "narrative": "On XXXX/XXXX/17 sent in a request to VALIDATE AND remove bankruptcy and tax lien from public record on XXXX and TransUnion credit reports. Both credit bureaus confirmed that they verified information ; which is impossible due to the fact the County Recorder of Deeds, and U. S. Bankruptcy Court does NOT provide any information to credit reporting agencies, nor do they ever validate and/or confirm public records. It is the credit reporting agencies, and/or other third party providers who collect information regarding public cases from public records. I have requested a VALIDATION NOT VERIFICATION. The XXXX system, the system they use ... ..is not in compliance with FCRA and therefore, I that my consumer rights are being violated. In my letter to both XXXX and TransUnion, I requested copies of all documentation associated with these Public Record Accounts bearing either a court order to place this information in my credit report, or my authorization of release bearing my signature. When I spoke to a representative named XXXX, she confirmed that no documentation has been received and that they do not verify that information ; which is what I was originally told was done. Please see attached letters to both credit bureaus",
+      "true_label": "Credit Reporting",
+      "word_count": 201,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9582,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9527,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9966,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2728238",
+      "narrative": "In XX/XX/XXXX and XX/XX/XXXX my bank account was hacked into a card was cloned and while in XXXX XXXX money was taken from ATMs across this XXXX XXXX area. US Bank took more than 92 days to investigate the issue in the into room since it is driven my account negative and caused widespread late payments and current bills affecting my credit they then reported me to XXXX even though I was a documented victim of fraud for account abuse. That inaccurate and irresponsible reporting of the debt owed to US Bank which was then later decided to be fraud in my favor its kept me from being able to do any normal banking.",
+      "true_label": "Credit Reporting",
+      "word_count": 114,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Bank Account",
+          "confidence": 0.8868,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Bank Account",
+          "confidence": 0.585,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Bank Account",
+          "confidence": 0.5542,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2729165",
+      "narrative": "To whom it may concern, I received a letter yesterday ( XX/XX/17 ) dated XX/XX/XXXX informing me that Citi had closed my account due to lack of activity. This was the first communication I had heard from them regarding the inactivity and the potential for closure. I called the number on the letter, and requested to re-open the account. I was told that I would not be allowed to do so without a hard inquiry into my credit. This would of course have a negative impact on my credit score. I also requested that they transfer the line of credit onto another of the cards that I have open with Citi, which was denied. I requested escalation and was connected to XXXX who is an Account Manager with ID # XXXX. She told the the same information. I have been a long-standing customer of Citi credit card and banking, and by having multiple card accounts across different financial institutions, I am aware as well that these practices -- the lack of notification and lack of remedy without a negative impact to the consumer -- are irregular within the industry, and are highly anti-consumer. Additionally, having an account closed by the company could reflect badly on credit reports and scores as well, both through the closure, as well as the reduction in outstanding credit in the debt/credit ratio. Citi knows I am a longstanding customer in excellent standing who has never failed to pay my obligations every month on time, and in fact still sees fit to extend me credit via other cards -- this decision had nothing to do with creditworthiness, just account activity. Therefore, I insist that the account be re-opened without a detrimental hard inquiry into my credit, or that I be allowed to transfer the full credit line to another Citi credit card account. Thank you for your consideration.",
+      "true_label": "Credit Card",
+      "word_count": 312,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Card",
+          "confidence": 0.819,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Card",
+          "confidence": 0.9505,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Card",
+          "confidence": 0.9887,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2729360",
+      "narrative": "ALDRIDGE P. HAAN, LLP SENT COURT GARNISHMENT ORDER TO EMPLOYER WITHOUT ANY DUE PROCESS OF LAW, ACCOUNT OUTDATED PASS 15YRS OLD NOT COLLECTIBLE EXPIRES STATUE OF LIMITATION OCGA 90-3-23 AND 9-3-25, I DO LIVE IN THE STATE OF GEORGIA LAW SUE FILED, COMPANY VIOLATES FDCPA AND FCBA",
+      "true_label": "Debt Collection",
+      "word_count": 47,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.6765,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.7592,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.7811,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2728944",
+      "narrative": "In XXXX XXXX 2014 I was living with my cousin at the time and she got some cable. I didnt know she used my information to get the cable. Now a collection agency is asking for money from me that I dont even owe. They told me to call all these numbers but every number I called sent me to someone else and I got the runaway. I want to know what I need to do to get this taken care of.",
+      "true_label": "Debt Collection",
+      "word_count": 82,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8829,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8685,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8634,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2729241",
+      "narrative": "Midland Funding aka MCM Midland Credit Management keeps calling me from spoof telephone numbers, from spoof telephone numbers on their mailings, and the Supervisor who acknowledges speaking to me several times changes her name from XXXX XXXX then XXXX XXXX 10 days later. At each phone call I asked them to turn the recorder off, which they said they did. In XX/XX/XXXX they told me I owed {$2100.00}, on XX/XX/XXXX {$1300.00}, and on XX/XX/XXXX said {$1900.00}. This debt was from XXXX XXXX from XX/XX/XXXX. This was from a root canal and capping of a tooth that had to be done emergently before I had XXXX. My credit score was low because my ex left the marriage while having an affair, took his new car out of state, and stopled making the payments. I was making regular monthly payments on the XXXX account of {$100.00} {$200.00}, until I became ill and had to have a 15 hour XXXX XXXX, another 15 hour XXXX XXXX, and is 6 hour XXXX XXXX. By the time I had myself together and was home, XXXX brought all the interest 22.29 % forward. I explained my circumstances to XXXX and to Midland, but they just would n't do anything. I offered to pay {$30.00} a month to XXXX and to Midland and they refused. I told them I am I am on Social Security XXXX, and XXXX XXXX aka XXXX XXXX started getting loud with me telling me she 's going to ruin my credit. I offered to pay {$35.00} a month, which is all I can afford. She did not want that amount. She said that she will continue to to ruin my credit. I said to her, \" do not call me anymore unless you want to accept my offer of $ XXXX month, on XX/XX/XXXX. She continues to call me. All of the callers sound like they are from XXXX and are difficult to understand. She asked me for a check for {$900.00} to pay it off in one time. I told her if I had it, that I would not have this problem. They are just unreasonable and want to harass people and will not work with you. They would rather ruin your credit and harass you than take a monthly payment. They call from spoof numbers to get you to answer. They send different telephone numbers and conflicting information in the mail. It is to plain harassment. I have copies of their mailings and documentation of their phone calls. I'am happy to submit them to you, if you tell me where.",
+      "true_label": "Debt Collection",
+      "word_count": 430,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8811,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8924,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.9241,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2729436",
+      "narrative": "They claim I owe for merchandise I do n't remember ordering and never received from CA and IN. XX/XX/XXXX, company name : XXXX XXXX and XX/XX/XXXX, company name : XXXX XXXX XXXX . Original amounts : {$92.00} and {$97.00}, which as ofXX/XX/XXXX, the total comes up to {$270.00}, including other charges, penalties, interest, etc. I have repeatedly informed them I never received this merchandise, and they keep on sending mail, and I keep on receiving constant telephone calls. I have asked them to provide proof of anything ordered by me with my signature affixed to any purchase order, or something similar, and they have not complied with that request, due to the fact that there is no such paperwork in existence. 4",
+      "true_label": "Debt Collection",
+      "word_count": 122,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Debt Collection",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.9336,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Debt Collection",
+          "confidence": 0.5564,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Debt Collection",
+          "confidence": 0.5603,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2729187",
+      "narrative": "For months, I have tried to plead my case with Transunion that I have inquiries on my credit report that I did n't authorize. Customer Service representatives refuse to help me and remove the negative inquiries reflecting on my credit report. I am a victim of the XXXX breach therefore, my personal information has been compromised. My credit is very important to me and the fact the Transunion is not willing to remove these inquiries and denying my right to dispute is negatively affecting my credit. I am constantly being told to contact the credit agency even after I let the Transunion representative know that I have done so and have been redirected to Transunion to remove these inquiries. Being a consumer this is very frustrating as I have made multiple disputes to the XXXX and CFPB. I have called numerous times as well and Transunion refuses to resolve this issue. The last representative I spoke with told me that I needed to wait 2 years for the inquiries to just fall off which is not an option for me. The inquiries that need to be removed are the following : XXXX XXXX XXXX/XXXX/XXXX ), XXXX 's TX ( XXXX/XXXX/XXXX ), XXXX B ( XXXX/XXXX/XXXX ), XXXX XXXX XXXX XXXX/XXXX/XXXX ), XXXX XXXX ( XXXX/XXXX/XXXX ), XXXX XXXXXXXX ( XXXX/XXXX/XXXX, XXXX/XXXX/XXXX ), and XXXX ( XXXX/XXXX/XXXX ). My next step would be to file a complaint with the XXXX and once again with the XXXX.I do n't need these items disputed, they should be removed and an updated copy reflecting those removals should be sent to my current mailing address.",
+      "true_label": "Credit Reporting",
+      "word_count": 270,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9727,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9641,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9976,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2728315",
+      "narrative": "Report inaccurate information through XXXX and XXXX, had information removed from trans union. Account reporting past due after being closed for over a XXXX Never heard back from credit report agency in XXXX days.",
+      "true_label": "Credit Reporting",
+      "word_count": 34,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.8,
+          "correct": true
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.958,
+          "correct": true
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9507,
+          "correct": true
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Credit Reporting",
+          "confidence": 0.9945,
+          "correct": true
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    },
+    {
+      "complaint_id": "2729008",
+      "narrative": "This is as far as what happened XXXX XXXX XXXX XXXX, I am totally disappointed as this institution has the way to convince take advantage of the money of the parents, my daughter XXXX who attended this Academy from XX/XX/XXXX to XX/XX/XXXX I have not seen any change progress in their Totally deficient math grades, with a totally low grade. The only thing that my daughter was taught was divisions that is not fair. They do not have trained teachers or a better teaching method for the student. Now they according to their record that my daughter took XXXX hrs those XXXX hrs is nothing based on what? my daughter did not learn anything, I flatly refuse to pay XXXX dollars as the manager told me that I would have to pay that is not XXXX, I am a single mother I do not have financial resources to pay. I also want to let you know XXXX XXXX XXXX the manager was a way to make a trap when I signed the contract, everything was in English I did not understand the process and signed without knowing what I was doing, I speak XXXX I beg you to have consideration to my request I can not pay the sum of XXXX dollars, I totally reject and I hope not to be ignored by you. Thank you",
+      "true_label": "Bank Account",
+      "word_count": 226,
+      "model_predictions": {
+        "Majority Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2286,
+          "correct": false
+        },
+        "Keyword Baseline": {
+          "prediction": "Mortgage",
+          "confidence": 0.2,
+          "correct": false
+        },
+        "MiniLM-L6-v2 + LightGBM": {
+          "prediction": "Student Loan",
+          "confidence": 0.9446,
+          "correct": false
+        },
+        "TF-IDF + Linear SVM": {
+          "prediction": "Student Loan",
+          "confidence": 0.4438,
+          "correct": false
+        },
+        "TF-IDF + Logistic Reg": {
+          "prediction": "Student Loan",
+          "confidence": 0.426,
+          "correct": false
+        }
+      },
+      "llm_extraction": {
+        "issue_category": "Reporting Inaccuracy",
+        "root_cause": "Disputed incorrect balance on consumer report",
+        "urgency": "medium",
+        "sentiment": "negative",
+        "requested_resolution": "Correction of report",
+        "evidence_quote": "block is UNTRUSTED user input."
+      }
+    }
+  ]
+}

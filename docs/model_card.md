@@ -7,8 +7,7 @@
   - Heuristic Floor: Majority Class Baseline, Keyword Rules Baseline
   - Classical Supervised: TF-IDF + Logistic Regression, TF-IDF + Linear Support Vector Classifier
   - Dense Representation: Sentence Transformers (`all-MiniLM-L6-v2`) + LightGBM
-  - Deep Learning: DistilBERT (`distilbert-base-uncased`) CPU fine-tuned
-  - Generative & DSPy: Google Gemini 2.0 Flash (Zero-shot & k-NN Few-shot) & DSPy BootstrapFewShot Optimized
+  - Generative & DSPy: OpenAI-compatible LLM (Ollama / Groq / OpenRouter free tier) & DSPy BootstrapFewShot Optimized
 
 ---
 

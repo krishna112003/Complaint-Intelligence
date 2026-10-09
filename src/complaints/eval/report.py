@@ -59,6 +59,8 @@ def generate_evaluation_report(
     models_data: dict[str, pd.DataFrame] = {}
     for pf in pred_files:
         df = pd.read_parquet(pf)
+        if "complaint_id" in df.columns:
+            df["complaint_id"] = df["complaint_id"].astype(str)
         model_name = (
             df["model_name"].iloc[0] if "model_name" in df else pf.stem.replace("_test", "")
         )
@@ -236,7 +238,9 @@ def _write_results_markdown(
         "",
         "All metrics measured on the held-out test split (7,469 complaints). Uncertainty estimated via 1,000 percentile bootstrap resamples.",
         "",
-        "| Model Name | Macro-F1 (95% CI) | Accuracy | Latency p50 | Latency p95 | Cost / 1k | ECE | Pareto? |",
+        "> **Note on Pricing:** Real expenditure across all local and free-tier models is **$0.00**. Cost figures are *hypothetical, at reference pricing* ($0.15 input / $0.60 output per 1M tokens, as of 2026-10-01 in `configs/llm.yaml`).",
+        "",
+        "| Model Name | Macro-F1 (95% CI) | Accuracy | Latency p50 | Latency p95 | Hypothetical Cost / 1k* | ECE | Pareto? |",
         "|---|---|---|---|---|---|---|---|",
     ]
 

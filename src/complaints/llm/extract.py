@@ -120,12 +120,21 @@ def run_structured_extraction(
             cid = row["complaint_id"]
             narrative = str(row["narrative"])
 
-            extracted_data, meta = extract_complaint_info(
-                narrative=narrative,
-                client=llm,
-                prompt_template=template,
-                version_tag=version_tag,
-            )
+            try:
+                extracted_data, meta = extract_complaint_info(
+                    narrative=narrative,
+                    client=llm,
+                    prompt_template=template,
+                    version_tag=version_tag,
+                )
+            except Exception as e:
+                logger.warning(
+                    "Extraction interrupted on complaint_id=%s (%s). Preserving %d completed records.",
+                    cid,
+                    e,
+                    len(records),
+                )
+                break
 
             if meta["schema_valid"]:
                 valid_count += 1

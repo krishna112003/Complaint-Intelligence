@@ -11,16 +11,15 @@ on:
       - "tests/**"
       - "sql/**"
   workflow_dispatch:
-    inputs:
-      live_llm_eval:
-        description: "Re-run live LLM evaluation (costs API tokens)"
-        required: false
-        default: false
-        type: boolean
+
+# No secrets required — runs entirely offline using FakeLLMClient / ReplayClient
 
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
+    env:
+      # Force offline profile so CI never attempts real API calls
+      COMPLAINTS_LLM_PROFILE: "fake"
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -51,5 +50,31 @@ jobs:
 
       - name: Check Regression Gate on Frozen Eval Set
         run: |
-          # Run gate against frozen cached responses (no API key required)
+          # Runs with FakeLLMClient — zero network calls, zero API keys needed
           python -m complaints.eval.gate || echo "Gate checked (baseline initialization needed in main)."
+
+  build-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Install Frontend Dependencies
+        run: npm ci
+
+      - name: Run Frontend Tests
+        run: npm test
+
+      - name: Build Static Export
+        run: npm run build
+

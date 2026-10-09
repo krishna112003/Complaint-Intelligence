@@ -25,9 +25,8 @@ graph TD
         TRAIN --> BASELINES[Majority & Keyword Rules]
         TRAIN --> CLASSICAL[TF-IDF Logistic Regression & SVM]
         TRAIN --> EMBEDDINGS[MiniLM-L6-v2 + LightGBM]
-        TRAIN --> TRANSFORMER[DistilBERT CPU Fine-tune]
         TRAIN --> FEWSHOT[Embedding Few-Shot Retriever]
-        FEWSHOT --> GEMINI[Gemini 2.0 Flash / FakeLLM]
+        FEWSHOT --> LLM[Free-Tier LLM / FakeLLM]
         TRAIN --> DSPY[DSPy BootstrapFewShot Optimizer]
     end
 
@@ -36,16 +35,16 @@ graph TD
         PREDICTOR --> METRICS[Macro-F1, Accuracy, ECE, CIs]
         PREDICTOR --> STATS[McNemar & Paired Wilcoxon Tests]
         PREDICTOR --> BIAS[Demographic Counterfactual Probes]
-        TEST --> TOPICS[BERTopic & DuckDB Window Trends]
+        TEST --> VOLUME[DuckDB Window Volume Trends]
         METRICS --> GATE[LLMOps Regression Gate]
         GATE --> CI[GitHub Actions CI/CD]
     end
 
     subgraph User Delivery [Interactive Web Application]
-        PREDICTOR --> APP[Streamlit Multi-Tab App]
+        PREDICTOR --> APP[Web Portfolio & Dashboard]
         METRICS --> APP
         BIAS --> APP
-        TOPICS --> APP
+        VOLUME --> APP
     end
 ```
 
@@ -78,7 +77,6 @@ The deployment gate (`src/complaints/eval/gate.py`) enforces four strict quality
 
 ---
 
-## 5. Topic Trends & Emerging Themes
+## 5. Longitudinal Complaint Volume Analytics
 
-- **Embedding-Aware BERTopic**: Uses precomputed sentence embeddings (`all-MiniLM-L6-v2`) to eliminate redundant encoding overhead.
-- **DuckDB Window Analysis**: Monthly complaint volume shares are aggregated, tracking Month-over-Month (MoM) share changes, 3-month moving averages, and consecutive positive growth streaks ($\ge 3$ months) to flag emerging systemic complaints.
+- **DuckDB Window Analysis**: Monthly complaint volume shares are aggregated, tracking Month-over-Month (MoM) share changes, 3-month moving averages, and monthly volume rankings across 10 consolidated financial product categories.

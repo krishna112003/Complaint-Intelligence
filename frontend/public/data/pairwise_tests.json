@@ -1,0 +1,124 @@
+{
+  "pairs": [
+    {
+      "model_a": "Majority Baseline",
+      "model_b": "Keyword Baseline",
+      "delta_f1": -0.321,
+      "delta_f1_ci_lower": -0.3348,
+      "delta_f1_ci_upper": -0.3068,
+      "excludes_zero": true,
+      "mcnemar_stat": 2053.89,
+      "mcnemar_p_value": 0.0,
+      "adjusted_p_value": 0.0,
+      "significant_after_holm": true
+    },
+    {
+      "model_a": "Majority Baseline",
+      "model_b": "MiniLM-L6-v2 + LightGBM",
+      "delta_f1": -0.5258,
+      "delta_f1_ci_lower": -0.5883,
+      "delta_f1_ci_upper": -0.5164,
+      "excludes_zero": true,
+      "mcnemar_stat": 4374.39,
+      "mcnemar_p_value": 0.0,
+      "adjusted_p_value": 0.0,
+      "significant_after_holm": true
+    },
+    {
+      "model_a": "Majority Baseline",
+      "model_b": "TF-IDF + Linear SVM",
+      "delta_f1": -0.5712,
+      "delta_f1_ci_lower": -0.6373,
+      "delta_f1_ci_upper": -0.5618,
+      "excludes_zero": true,
+      "mcnemar_stat": 4827.49,
+      "mcnemar_p_value": 0.0,
+      "adjusted_p_value": 0.0,
+      "significant_after_holm": true
+    },
+    {
+      "model_a": "Majority Baseline",
+      "model_b": "TF-IDF + Logistic Reg",
+      "delta_f1": -0.577,
+      "delta_f1_ci_lower": -0.6426,
+      "delta_f1_ci_upper": -0.5678,
+      "excludes_zero": true,
+      "mcnemar_stat": 4772.27,
+      "mcnemar_p_value": 0.0,
+      "adjusted_p_value": 0.0,
+      "significant_after_holm": true
+    },
+    {
+      "model_a": "Keyword Baseline",
+      "model_b": "MiniLM-L6-v2 + LightGBM",
+      "delta_f1": -0.2048,
+      "delta_f1_ci_lower": -0.2676,
+      "delta_f1_ci_upper": -0.1886,
+      "excludes_zero": true,
+      "mcnemar_stat": 1035.92,
+      "mcnemar_p_value": 2.7977374811095333e-227,
+      "adjusted_p_value": 1.1190949924438133e-226,
+      "significant_after_holm": true
+    },
+    {
+      "model_a": "Keyword Baseline",
+      "model_b": "TF-IDF + Linear SVM",
+      "delta_f1": -0.2503,
+      "delta_f1_ci_lower": -0.3147,
+      "delta_f1_ci_upper": -0.2349,
+      "excludes_zero": true,
+      "mcnemar_stat": 1449.33,
+      "mcnemar_p_value": 0.0,
+      "adjusted_p_value": 0.0,
+      "significant_after_holm": true
+    },
+    {
+      "model_a": "Keyword Baseline",
+      "model_b": "TF-IDF + Logistic Reg",
+      "delta_f1": -0.2561,
+      "delta_f1_ci_lower": -0.3201,
+      "delta_f1_ci_upper": -0.2401,
+      "excludes_zero": true,
+      "mcnemar_stat": 1411.41,
+      "mcnemar_p_value": 6.961548717225564e-309,
+      "adjusted_p_value": 3.480774358612782e-308,
+      "significant_after_holm": true
+    },
+    {
+      "model_a": "MiniLM-L6-v2 + LightGBM",
+      "model_b": "TF-IDF + Linear SVM",
+      "delta_f1": -0.0455,
+      "delta_f1_ci_lower": -0.1099,
+      "delta_f1_ci_upper": 0.0157,
+      "excludes_zero": false,
+      "mcnemar_stat": 123.74,
+      "mcnemar_p_value": 9.588564579926782e-29,
+      "adjusted_p_value": 2.8765693739780344e-28,
+      "significant_after_holm": true
+    },
+    {
+      "model_a": "MiniLM-L6-v2 + LightGBM",
+      "model_b": "TF-IDF + Logistic Reg",
+      "delta_f1": -0.0512,
+      "delta_f1_ci_lower": -0.1153,
+      "delta_f1_ci_upper": 0.011,
+      "excludes_zero": false,
+      "mcnemar_stat": 102.91,
+      "mcnemar_p_value": 3.501233741677274e-24,
+      "adjusted_p_value": 7.002467483354548e-24,
+      "significant_after_holm": true
+    },
+    {
+      "model_a": "TF-IDF + Linear SVM",
+      "model_b": "TF-IDF + Logistic Reg",
+      "delta_f1": -0.0058,
+      "delta_f1_ci_lower": -0.0699,
+      "delta_f1_ci_upper": 0.0588,
+      "excludes_zero": false,
+      "mcnemar_stat": 2.22,
+      "mcnemar_p_value": 0.1365589203062581,
+      "adjusted_p_value": 0.1365589203062581,
+      "significant_after_holm": false
+    }
+  ]
+}

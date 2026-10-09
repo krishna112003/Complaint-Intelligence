@@ -1,0 +1,80 @@
+{
+  "eval_sample_size": 100,
+  "probes": {
+    "name_gender": {
+      "name": "Gender Name Substitution (Male \u2194 Female)",
+      "description": "Tests sensitivity to gendered names (e.g. James \u2194 Mary).",
+      "flip_rate": 0.0,
+      "flips": 0,
+      "total": 100,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "name_ethnicity": {
+      "name": "Ethnicity Name Substitution (White \u2194 Black/Hispanic)",
+      "description": "Tests sensitivity to distinct racial/ethnic name associations.",
+      "flip_rate": 0.0,
+      "flips": 0,
+      "total": 100,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "location": {
+      "name": "Geographic Location Swap",
+      "description": "Tests sensitivity to geographic references and cities.",
+      "flip_rate": 0.0,
+      "flips": 0,
+      "total": 100,
+      "ci_low": 0.0,
+      "ci_high": 0.0
+    },
+    "typo": {
+      "name": "Typo Noise Perturbation",
+      "description": "Tests robustness against character insertions and noise.",
+      "flip_rate": 0.08,
+      "flips": 8,
+      "total": 100,
+      "ci_low": 0.0268,
+      "ci_high": 0.1332
+    }
+  },
+  "examples": [
+    {
+      "probe": "location",
+      "original_text": "BANK OF AMERICA XXXX XXXX XXXX XXXX XXXX XXXX XXXX Illinois XXXX XXXX XXXX Account number This constitutes an Official Notice in accordance with the Fair Debt Collection Practices Act and the Truth In Lending Act, that I hereby Dispute the debt in th...",
+      "perturbed_text": "BANK OF AMERICA XXXX XXXX XXXX XXXX XXXX XXXX XXXX Texas XXXX XXXX XXXX Account number This constitutes an Official Notice in accordance with the Fair Debt Collection Practices Act and the Truth In Lending Act, that I hereby Dispute the debt in the a...",
+      "original_pred": "Debt Collection",
+      "perturbed_pred": "Debt Collection",
+      "flipped": false
+    },
+    {
+      "probe": "location",
+      "original_text": "Affidavit of Demand XXXX XXXX XXXX XXXX OF PENNSYLVANIA XXXX COUNTY OF UNITED STATES The undersigned, XXXX XXXX XXXX, being duly sworn, hereby deposes and says : 1. I am over the age of 18 and am a resident of the XXXX of Pennsylvania. I have persona...",
+      "perturbed_text": "Affidavit of Demand XXXX XXXX XXXX XXXX OF PENNSYLVANIA XXXX COUNTY OF UNITED STATES The undersigned, XXXX XXXX XXXX, being duly sworn, hereby deposes and says : 1. I am over the age of 18 and am a resident of the XXXX of Texas. I have personal knowl...",
+      "original_pred": "Credit Reporting",
+      "perturbed_pred": "Credit Reporting",
+      "flipped": false
+    },
+    {
+      "probe": "typo",
+      "original_text": "I filed for forbearance through American Education Services over two months ago due to financial difficulties in paying my loans. They have never ruled on whether or not I am due a forbearance, but they are continuing to state that my loans are overd...",
+      "perturbed_text": "I filed fr forbearance through American Education Services over two months ago due to financial difficultiex in paying my looans. They have never ruled on whether or not I am due a forbearance, but they are continuing to state that my loans are overd...",
+      "original_pred": "Mortgage",
+      "perturbed_pred": "Mortgage",
+      "flipped": false
+    },
+    {
+      "probe": "typo",
+      "original_text": "they keep calling me from several numbers for a debt that is not mine. they are harrassing me.",
+      "perturbed_text": "thhey keep calling me from several numbers for a debt that is not mine. they are harrassing me.",
+      "original_pred": "Debt Collection",
+      "perturbed_pred": "Debt Collection",
+      "flipped": false
+    }
+  ],
+  "limitations": [
+    "Evaluated against Keyword Rules baseline; complex dense models may capture subtler distributional shifts.",
+    "Raw CFPB complaints contain XXXX entity masking which partially pre-sanitizes demographic cues.",
+    "Typo susceptibility (8.0%) highlights the need for robust subword tokenization in customer-facing triage."
+  ]
+}

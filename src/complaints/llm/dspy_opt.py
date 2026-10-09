@@ -118,26 +118,63 @@ class FakeDSPyLM(dspy.LM):
         return [resp]
 
 
-def configure_dspy_lm(api_key: str | None = None) -> dspy.LM:
-    """Configure active DSPy LM: Gemini if configured, else FakeDSPyLM."""
-    key = api_key or get_env("GEMINI_API_KEY", required=False)
-    if key and key != "replace-with-your-actual-gemini-api-key":
-        try:
-            model_name = (
-                get("llm", "providers", {}).get("gemini", {}).get("model", "gemini-2.0-flash")
+_SENTINEL = object()
+
+
+def configure_dspy_lm(profile: str | None = None, api_key: Any = _SENTINEL) -> dspy.LM:
+    """Configure active DSPy LM pointing to the free OpenAI-compatible endpoint, or FakeDSPyLM."""
+    if api_key is None:
+        fake_lm = FakeDSPyLM()
+        dspy.settings.configure(lm=fake_lm)
+        logger.info("Configured DSPy with FakeDSPyLM (api_key=None forced offline test mode).")
+        return fake_lm
+
+    profile_name = profile or str(get("llm", "active_profile", "ollama")).lower()
+    profiles_cfg = get("llm", "profiles", {})
+    profile_cfg = profiles_cfg.get(profile_name)
+
+    if profile_cfg and profile_cfg.get("base_url"):
+        base_url = str(profile_cfg["base_url"])
+        model = str(profile_cfg.get("model", "qwen2.5:3b"))
+        api_key_env = profile_cfg.get("api_key_env")
+        resolved_key = (
+            api_key
+            if api_key is not _SENTINEL
+            else (
+                get_env(api_key_env)
+                if api_key_env
+                else str(profile_cfg.get("api_key_default", "ollama"))
             )
-            lm = dspy.LM(f"gemini/{model_name}", api_key=key)
-            dspy.settings.configure(lm=lm)
-            logger.info("Configured DSPy with Gemini model: %s", model_name)
-            return lm
-        except Exception as e:
-            logger.warning(
-                "Failed to configure live Gemini DSPy LM (%s). Falling back to FakeDSPyLM.", e
-            )
+        )
+
+        if profile_name == "ollama":
+            import urllib.request
+
+            try:
+                with urllib.request.urlopen(f"{base_url.rstrip('/v1')}/api/version", timeout=0.8):
+                    pass
+                lm = dspy.LM(f"openai/{model}", api_base=base_url, api_key=resolved_key)
+                dspy.settings.configure(lm=lm)
+                logger.info("Configured DSPy with local Ollama model: %s", model)
+                return lm
+            except Exception:
+                logger.info("Local Ollama not detected. Using FakeDSPyLM for offline execution.")
+        elif resolved_key:
+            try:
+                lm = dspy.LM(f"openai/{model}", api_base=base_url, api_key=resolved_key)
+                dspy.settings.configure(lm=lm)
+                logger.info("Configured DSPy with free profile '%s': %s", profile_name, model)
+                return lm
+            except Exception as e:
+                logger.warning(
+                    "Failed to configure DSPy with %s (%s). Falling back to FakeDSPyLM.",
+                    profile_name,
+                    e,
+                )
 
     fake_lm = FakeDSPyLM()
     dspy.settings.configure(lm=fake_lm)
-    logger.info("Configured DSPy with FakeDSPyLM for offline/test execution.")
+    logger.info("Configured DSPy with FakeDSPyLM for zero-network/test execution.")
     return fake_lm
 
 

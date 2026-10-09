@@ -1,0 +1,529 @@
+{
+  "models": {
+    "Majority Baseline": {
+      "ece": 0.1121,
+      "bins": [
+        {
+          "bin_index": 0,
+          "bin_range": [
+            0.0,
+            0.1
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.05
+        },
+        {
+          "bin_index": 1,
+          "bin_range": [
+            0.1,
+            0.2
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.15
+        },
+        {
+          "bin_index": 2,
+          "bin_range": [
+            0.2,
+            0.3
+          ],
+          "count": 7469,
+          "accuracy": 0.1165,
+          "confidence": 0.2286
+        },
+        {
+          "bin_index": 3,
+          "bin_range": [
+            0.3,
+            0.4
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.35
+        },
+        {
+          "bin_index": 4,
+          "bin_range": [
+            0.4,
+            0.5
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.45
+        },
+        {
+          "bin_index": 5,
+          "bin_range": [
+            0.5,
+            0.6
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.55
+        },
+        {
+          "bin_index": 6,
+          "bin_range": [
+            0.6,
+            0.7
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.65
+        },
+        {
+          "bin_index": 7,
+          "bin_range": [
+            0.7,
+            0.8
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.75
+        },
+        {
+          "bin_index": 8,
+          "bin_range": [
+            0.8,
+            0.9
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.85
+        },
+        {
+          "bin_index": 9,
+          "bin_range": [
+            0.9,
+            1.0
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.95
+        }
+      ]
+    },
+    "Keyword Baseline": {
+      "ece": 0.2229,
+      "bins": [
+        {
+          "bin_index": 0,
+          "bin_range": [
+            0.0,
+            0.1
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.05
+        },
+        {
+          "bin_index": 1,
+          "bin_range": [
+            0.1,
+            0.2
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.15
+        },
+        {
+          "bin_index": 2,
+          "bin_range": [
+            0.2,
+            0.3
+          ],
+          "count": 1231,
+          "accuracy": 0.0585,
+          "confidence": 0.2
+        },
+        {
+          "bin_index": 3,
+          "bin_range": [
+            0.3,
+            0.4
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.35
+        },
+        {
+          "bin_index": 4,
+          "bin_range": [
+            0.4,
+            0.5
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.45
+        },
+        {
+          "bin_index": 5,
+          "bin_range": [
+            0.5,
+            0.6
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.55
+        },
+        {
+          "bin_index": 6,
+          "bin_range": [
+            0.6,
+            0.7
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.65
+        },
+        {
+          "bin_index": 7,
+          "bin_range": [
+            0.7,
+            0.8
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.75
+        },
+        {
+          "bin_index": 8,
+          "bin_range": [
+            0.8,
+            0.9
+          ],
+          "count": 6238,
+          "accuracy": 0.5611,
+          "confidence": 0.8
+        },
+        {
+          "bin_index": 9,
+          "bin_range": [
+            0.9,
+            1.0
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.95
+        }
+      ]
+    },
+    "MiniLM-L6-v2 + LightGBM": {
+      "ece": 0.0345,
+      "bins": [
+        {
+          "bin_index": 0,
+          "bin_range": [
+            0.0,
+            0.1
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.05
+        },
+        {
+          "bin_index": 1,
+          "bin_range": [
+            0.1,
+            0.2
+          ],
+          "count": 4,
+          "accuracy": 0.25,
+          "confidence": 0.1906
+        },
+        {
+          "bin_index": 2,
+          "bin_range": [
+            0.2,
+            0.3
+          ],
+          "count": 204,
+          "accuracy": 0.2696,
+          "confidence": 0.2621
+        },
+        {
+          "bin_index": 3,
+          "bin_range": [
+            0.3,
+            0.4
+          ],
+          "count": 472,
+          "accuracy": 0.3814,
+          "confidence": 0.3547
+        },
+        {
+          "bin_index": 4,
+          "bin_range": [
+            0.4,
+            0.5
+          ],
+          "count": 692,
+          "accuracy": 0.4682,
+          "confidence": 0.4513
+        },
+        {
+          "bin_index": 5,
+          "bin_range": [
+            0.5,
+            0.6
+          ],
+          "count": 687,
+          "accuracy": 0.5837,
+          "confidence": 0.5495
+        },
+        {
+          "bin_index": 6,
+          "bin_range": [
+            0.6,
+            0.7
+          ],
+          "count": 726,
+          "accuracy": 0.6377,
+          "confidence": 0.6501
+        },
+        {
+          "bin_index": 7,
+          "bin_range": [
+            0.7,
+            0.8
+          ],
+          "count": 919,
+          "accuracy": 0.7214,
+          "confidence": 0.7523
+        },
+        {
+          "bin_index": 8,
+          "bin_range": [
+            0.8,
+            0.9
+          ],
+          "count": 1214,
+          "accuracy": 0.7982,
+          "confidence": 0.8555
+        },
+        {
+          "bin_index": 9,
+          "bin_range": [
+            0.9,
+            1.0
+          ],
+          "count": 2551,
+          "accuracy": 0.9126,
+          "confidence": 0.9522
+        }
+      ]
+    },
+    "TF-IDF + Linear SVM": {
+      "ece": 0.0188,
+      "bins": [
+        {
+          "bin_index": 0,
+          "bin_range": [
+            0.0,
+            0.1
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.05
+        },
+        {
+          "bin_index": 1,
+          "bin_range": [
+            0.1,
+            0.2
+          ],
+          "count": 1,
+          "accuracy": 0.0,
+          "confidence": 0.1846
+        },
+        {
+          "bin_index": 2,
+          "bin_range": [
+            0.2,
+            0.3
+          ],
+          "count": 74,
+          "accuracy": 0.2432,
+          "confidence": 0.2701
+        },
+        {
+          "bin_index": 3,
+          "bin_range": [
+            0.3,
+            0.4
+          ],
+          "count": 265,
+          "accuracy": 0.3547,
+          "confidence": 0.3564
+        },
+        {
+          "bin_index": 4,
+          "bin_range": [
+            0.4,
+            0.5
+          ],
+          "count": 534,
+          "accuracy": 0.4888,
+          "confidence": 0.4555
+        },
+        {
+          "bin_index": 5,
+          "bin_range": [
+            0.5,
+            0.6
+          ],
+          "count": 784,
+          "accuracy": 0.5969,
+          "confidence": 0.5488
+        },
+        {
+          "bin_index": 6,
+          "bin_range": [
+            0.6,
+            0.7
+          ],
+          "count": 822,
+          "accuracy": 0.6691,
+          "confidence": 0.6499
+        },
+        {
+          "bin_index": 7,
+          "bin_range": [
+            0.7,
+            0.8
+          ],
+          "count": 1130,
+          "accuracy": 0.7743,
+          "confidence": 0.7528
+        },
+        {
+          "bin_index": 8,
+          "bin_range": [
+            0.8,
+            0.9
+          ],
+          "count": 1804,
+          "accuracy": 0.8459,
+          "confidence": 0.8548
+        },
+        {
+          "bin_index": 9,
+          "bin_range": [
+            0.9,
+            1.0
+          ],
+          "count": 2055,
+          "accuracy": 0.9513,
+          "confidence": 0.9387
+        }
+      ]
+    },
+    "TF-IDF + Logistic Reg": {
+      "ece": 0.0497,
+      "bins": [
+        {
+          "bin_index": 0,
+          "bin_range": [
+            0.0,
+            0.1
+          ],
+          "count": 0,
+          "accuracy": 0.0,
+          "confidence": 0.05
+        },
+        {
+          "bin_index": 1,
+          "bin_range": [
+            0.1,
+            0.2
+          ],
+          "count": 3,
+          "accuracy": 0.0,
+          "confidence": 0.1854
+        },
+        {
+          "bin_index": 2,
+          "bin_range": [
+            0.2,
+            0.3
+          ],
+          "count": 103,
+          "accuracy": 0.3301,
+          "confidence": 0.2632
+        },
+        {
+          "bin_index": 3,
+          "bin_range": [
+            0.3,
+            0.4
+          ],
+          "count": 339,
+          "accuracy": 0.4071,
+          "confidence": 0.3531
+        },
+        {
+          "bin_index": 4,
+          "bin_range": [
+            0.4,
+            0.5
+          ],
+          "count": 530,
+          "accuracy": 0.4491,
+          "confidence": 0.4541
+        },
+        {
+          "bin_index": 5,
+          "bin_range": [
+            0.5,
+            0.6
+          ],
+          "count": 605,
+          "accuracy": 0.605,
+          "confidence": 0.5483
+        },
+        {
+          "bin_index": 6,
+          "bin_range": [
+            0.6,
+            0.7
+          ],
+          "count": 643,
+          "accuracy": 0.6796,
+          "confidence": 0.6515
+        },
+        {
+          "bin_index": 7,
+          "bin_range": [
+            0.7,
+            0.8
+          ],
+          "count": 752,
+          "accuracy": 0.7008,
+          "confidence": 0.7515
+        },
+        {
+          "bin_index": 8,
+          "bin_range": [
+            0.8,
+            0.9
+          ],
+          "count": 1073,
+          "accuracy": 0.7987,
+          "confidence": 0.854
+        },
+        {
+          "bin_index": 9,
+          "bin_range": [
+            0.9,
+            1.0
+          ],
+          "count": 3421,
+          "accuracy": 0.9132,
+          "confidence": 0.9695
+        }
+      ]
+    }
+  }
+}

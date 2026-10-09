@@ -1,0 +1,76 @@
+{
+  "stages": [
+    {
+      "id": "bronze",
+      "name": "Bronze Ingestion",
+      "tool": "DuckDB SQL (01_bronze.sql)",
+      "count": 208398,
+      "description": "Raw CFPB database load with native schema reflection and timestamp parsing.",
+      "status": "completed"
+    },
+    {
+      "id": "silver",
+      "name": "Silver Sanitization",
+      "tool": "DuckDB SQL (02_silver_clean.sql)",
+      "count": 201490,
+      "description": "Whitespace trimming, deduplication on narrative text, and removal of complaints < 50 chars.",
+      "status": "completed"
+    },
+    {
+      "id": "gold",
+      "name": "Gold Feature Store",
+      "tool": "DuckDB SQL (03_gold_features.sql)",
+      "count": 49787,
+      "description": "Taxonomy consolidation into 10 balanced business classes (10k ceiling per category).",
+      "status": "completed"
+    },
+    {
+      "id": "splits",
+      "name": "Temporal Splitting",
+      "tool": "Strict Chronological Partition",
+      "count": 49787,
+      "description": "Leakage-free temporal cutoff: 70% Train (34.8k), 15% Validation (7.5k), 15% Test (7.5k).",
+      "status": "completed"
+    },
+    {
+      "id": "models",
+      "name": "Model Zoo Training",
+      "tool": "Classical ML, Embeddings & LLMs",
+      "count": 7469,
+      "description": "Baselines, TF-IDF + Logistic Regression/SVM, MiniLM-L6-v2 + LightGBM, and DSPy Prompt Optimization.",
+      "status": "completed"
+    },
+    {
+      "id": "eval",
+      "name": "Statistical Evaluation",
+      "tool": "Bootstrap CI & McNemar Tests",
+      "count": 7469,
+      "description": "1,000 bootstrap resamples, ECE calibration curves, and Holm-Bonferroni hypothesis testing.",
+      "status": "completed"
+    },
+    {
+      "id": "bias",
+      "name": "Fairness Probing",
+      "tool": "Counterfactual Perturbations",
+      "count": 100,
+      "description": "Gender, ethnicity, geographic, and typo perturbation flip rate auditing.",
+      "status": "completed"
+    },
+    {
+      "id": "volume",
+      "name": "Complaint Volume Trends",
+      "tool": "DuckDB Window SQL Analytics",
+      "count": 49787,
+      "description": "Longitudinal monthly volume tracking, MoM growth rates, and 3-month moving averages across products.",
+      "status": "completed"
+    },
+    {
+      "id": "registry",
+      "name": "Model Registry & Export",
+      "tool": "DuckDB & Model Registry",
+      "count": 7469,
+      "description": "Exporting validated model weights, calibration maps, and real-time inference pipelines.",
+      "status": "completed"
+    }
+  ]
+}

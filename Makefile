@@ -1,4 +1,4 @@
-.PHONY: setup data train eval report app test lint clean all format
+.PHONY: setup data train eval report test lint clean all format
 
 VENV ?= .venv
 PYTHON := PYTHONPATH=src $(VENV)/bin/python
@@ -37,9 +37,26 @@ report:
 	$(PYTHON) -m complaints.eval.report
 	$(PYTHON) -m complaints.eval.gate
 
-# Run the Streamlit app
-app:
-	$(VENV)/bin/streamlit run app/streamlit_app.py
+# Export data for Next.js frontend
+export-frontend:
+	$(PYTHON) scripts/export_frontend_data.py
+
+# Frontend development and build commands
+frontend-install:
+	cd frontend && npm install
+
+frontend-dev:
+	cd frontend && npm run dev
+
+frontend-build:
+	cd frontend && npm run build
+
+frontend-test:
+	cd frontend && npm test
+
+# Run local FastAPI inference engine
+api:
+	$(PYTHON) -m uvicorn api.main:app --port 8000 --reload
 
 # Run tests
 test:

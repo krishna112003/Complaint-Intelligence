@@ -1,7 +1,7 @@
 [project]
 name = "complaint-intelligence"
 version = "0.1.0"
-description = "Complaint Intelligence & LLM Evaluation Pipeline — benchmarking classical ML, transformers and LLMs on CFPB consumer complaints."
+description = "Complaint Intelligence & LLM Evaluation Pipeline — benchmarking classical ML, sentence embeddings and LLMs on CFPB consumer complaints."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.11,<3.13"
@@ -16,19 +16,13 @@ dependencies = [
     "scikit-learn>=1.5.0,<1.7.0",
     "lightgbm>=4.5.0,<5.0.0",
     "sentence-transformers>=3.3.0,<4.0.0",
-    # Transformers (fine-tune optional)
+    # Dense Embeddings & Transformers
     "transformers>=4.46.0,<5.0.0",
-    "datasets>=3.1.0,<4.0.0",
-    "accelerate>=1.1.0,<2.0.0",
     # LLM
     "google-genai>=1.0.0,<3.0.0",
     "pydantic>=2.10.0,<3.0.0",
     # DSPy
     "dspy>=2.6.0,<2.7.0",
-    # Topics
-    "bertopic>=0.16.0,<0.17.0",
-    "umap-learn>=0.5.5,<0.6.0",
-    "hdbscan>=0.8.38,<0.9.0",
     # Statistics
     "scipy>=1.14.0,<2.0.0",
     "statsmodels>=0.14.0,<0.15.0",
@@ -39,8 +33,6 @@ dependencies = [
     # Tracking
     "mlflow>=2.19.0,<3.0.0",
     "sqlalchemy>=2.0.0,<2.1.0",
-    # App
-    "streamlit>=1.40.0,<2.0.0",
     # Config
     "pyyaml>=6.0.0,<7.0.0",
     "python-dotenv>=1.0.0,<2.0.0",
