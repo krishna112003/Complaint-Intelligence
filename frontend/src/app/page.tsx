@@ -11,6 +11,7 @@ import VolumeSection from "@/components/VolumeSection";
 import PlaygroundSection from "@/components/PlaygroundSection";
 import Footer from "@/components/Footer";
 import CyberScrollBackground from "@/components/CyberScrollBackground";
+import BackgroundVideo from "@/components/BackgroundVideo";
 import ScrollReveal from "@/components/ScrollReveal";
 import ScrollProgressHUD from "@/components/ScrollProgressHUD";
 import {
@@ -108,6 +109,9 @@ export default function Home() {
     <div className="flex flex-col relative">
       {/* Dynamic Futuristic Video-like Canvas Scroll Background */}
       <CyberScrollBackground />
+
+      {/* Dynamic Ambient Background Video (Plays seamlessly if video is present) */}
+      <BackgroundVideo videoSrc="/videos/background.mp4" />
 
       {/* Scroll-driven Floating HUD & Progress Tracker */}
       <ScrollProgressHUD />
