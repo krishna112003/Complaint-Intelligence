@@ -50,6 +50,16 @@ st.markdown(
     "**Benchmarking Classical ML vs. Dense Sentence Embeddings vs. Generative LLMs on CFPB Consumer Financial Complaints.**"
 )
 
+@st.dialog("📄 System Document Viewer", width="large")
+def show_document_dialog(title: str, file_path: Path) -> None:
+    """Display markdown document in a modal dialog."""
+    st.subheader(title)
+    if file_path.exists():
+        st.markdown(file_path.read_text())
+    else:
+        st.error(f"File `{file_path.name}` not found at `{file_path}`.")
+
+
 # Sidebar
 with st.sidebar:
     st.header("⚙️ Configuration")
@@ -65,10 +75,19 @@ with st.sidebar:
     )
 
     st.markdown("---")
-    st.markdown("### 🔗 Quick Links")
-    st.markdown("- [Reports Directory](file://reports)")
-    st.markdown("- [Model Card](file://docs/model_card.md)")
-    st.markdown("- [Architecture](file://docs/architecture.md)")
+    st.markdown("### 📖 Quick Documentation")
+    if st.button("📋 Model Card", key="sb_btn_mc", use_container_width=True):
+        show_document_dialog("Model Card", root / "docs/model_card.md")
+    if st.button("🏛️ Architecture Design", key="sb_btn_arch", use_container_width=True):
+        show_document_dialog("Architecture Design", root / "docs/architecture.md")
+    if st.button("📊 Evaluation Report", key="sb_btn_eval", use_container_width=True):
+        show_document_dialog("Evaluation Results Report", root / "reports/results.md")
+    if st.button("🛡️ Regression Gate Report", key="sb_btn_gate", use_container_width=True):
+        show_document_dialog("Regression Gate Report", root / "reports/gate_report.md")
+    if st.button("⚖️ Bias Probes Report", key="sb_btn_bias", use_container_width=True):
+        show_document_dialog("Bias & Fairness Report", root / "reports/bias_report.md")
+    if st.button("📈 Emerging Topics Report", key="sb_btn_topics", use_container_width=True):
+        show_document_dialog("Emerging Topics Report", root / "reports/emerging_topics.md")
 
 # Cache model initialization
 @st.cache_resource
@@ -79,7 +98,6 @@ def get_keyword_model() -> KeywordBaseline:
         train_df = pd.read_parquet(train_path)
         kb.fit(train_df, train_df)
     else:
-        # Fallback dummy training
         dummy = pd.DataFrame(
             {
                 "complaint_id": [1, 2],
@@ -94,8 +112,8 @@ def get_keyword_model() -> KeywordBaseline:
 keyword_model = get_keyword_model()
 
 # Create tabs
-tab_try, tab_results, tab_bias, tab_trends = st.tabs(
-    ["🔍 Try It", "📊 Results & Pareto", "🧪 Bias Lab", "📈 Topic Trends"]
+tab_try, tab_results, tab_bias, tab_trends, tab_docs = st.tabs(
+    ["🔍 Try It", "📊 Results & Pareto", "🧪 Bias Lab", "📈 Topic Trends", "📖 Documentation"]
 )
 
 # -------------------------------------------------------------
@@ -323,3 +341,43 @@ with tab_trends:
         with st.expander("View All Discovered Topic Labels"):
             with open(topic_labels_path) as f:
                 st.json(json.load(f))
+
+# -------------------------------------------------------------
+# TAB 5: DOCUMENTATION
+# -------------------------------------------------------------
+with tab_docs:
+    st.subheader("System Documentation, Model Card & Artifacts")
+    st.write(
+        "Browse the full architectural documentation, empirical evaluation results, "
+        "and governance artifacts directly inside the application."
+    )
+
+    doc_options = {
+        "📋 Model Card (docs/model_card.md)": root / "docs/model_card.md",
+        "🏛️ Architecture & Data Flow (docs/architecture.md)": root / "docs/architecture.md",
+        "📊 Full Evaluation Results (reports/results.md)": root / "reports/results.md",
+        "🛡️ LLMOps Regression Gate Report (reports/gate_report.md)": root / "reports/gate_report.md",
+        "⚖️ Bias & Fairness Probe Report (reports/bias_report.md)": root / "reports/bias_report.md",
+        "📈 Emerging Topics & Trends Report (reports/emerging_topics.md)": root / "reports/emerging_topics.md",
+        "🧹 Data Quality Audit (reports/data_quality.md)": root / "reports/data_quality.md",
+    }
+
+    selected_doc_title = st.selectbox(
+        "Select a document to read:",
+        list(doc_options.keys()),
+        index=0,
+    )
+
+    target_file = doc_options[selected_doc_title]
+    if target_file.exists():
+        content = target_file.read_text()
+        st.download_button(
+            label=f"💾 Download {target_file.name}",
+            data=content,
+            file_name=target_file.name,
+            mime="text/markdown",
+        )
+        st.markdown("---")
+        st.markdown(content)
+    else:
+        st.warning(f"File `{target_file}` not found.")
