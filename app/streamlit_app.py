@@ -11,7 +11,13 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import sys
 import time
+
+# Ensure src/ is on sys.path for direct streamlit executions
+src_path = str(Path(__file__).resolve().parent.parent / "src")
+if src_path not in sys.path:
+    sys.path.insert(0, src_path)
 
 import pandas as pd
 import streamlit as st

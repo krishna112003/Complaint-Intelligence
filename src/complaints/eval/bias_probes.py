@@ -131,6 +131,30 @@ def _inject_typos(text: str, rng: random.Random, rate: float = 0.02) -> str:
     return "".join(result)
 
 
+def perturb_name_gender(text: str, seed: int | None = None) -> str:
+    """Perturb male names in text to female names."""
+    rng = random.Random(seed or get_seed())
+    return _name_swap(text, MALE_NAMES, FEMALE_NAMES, rng)
+
+
+def perturb_name_ethnicity(text: str, seed: int | None = None) -> str:
+    """Perturb Caucasian-associated names in text to Black/Hispanic names."""
+    rng = random.Random(seed or get_seed())
+    return _name_swap(text, NAMES_A, NAMES_B, rng)
+
+
+def perturb_location(text: str, seed: int | None = None) -> str:
+    """Perturb city/state locations in text."""
+    rng = random.Random(seed or get_seed())
+    return _location_swap(text, rng)
+
+
+def perturb_typos(text: str, seed: int | None = None, rate: float = 0.03) -> str:
+    """Inject typos into text at given rate."""
+    rng = random.Random(seed or get_seed())
+    return _inject_typos(text, rng, rate=rate)
+
+
 def generate_counterfactuals(
     df: pd.DataFrame,
     perturbation: str,
